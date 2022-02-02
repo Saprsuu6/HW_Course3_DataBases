@@ -1,0 +1,112 @@
+﻿<Window x:Class="FruitsAndVegetables.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FruitsAndVegetables"
+        mc:Ignorable="d"
+        Title="FruitsAndVegetables" Height="400" Width="500" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <local:ViewModel x:Key="View"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+
+    <UniformGrid Columns="2" DataContext="{StaticResource View}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="5" DataContext="{Binding Product}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Name: "/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Type: "/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Color: "/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Calories: "/>
+
+                <TextBox Grid.Row="0" Grid.Column="1"
+                         Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Grid.Row="1" Grid.Column="1"
+                         Text="{Binding Type, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Grid.Row="2" Grid.Column="1"
+                         Text="{Binding Color, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Grid.Row="3" Grid.Column="1"
+                         Text="{Binding Calories, UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+
+            <UniformGrid Grid.Row="1" Rows="4">
+                <Button Content="Clear fields" Command="{Binding CommandClearFields}"/>
+                <Button Content="Add product" Command="{Binding CommandAddProduct}"/>
+                <Button Content="Remove product" Command="{Binding CommandRemoveProduct}"/>
+                <Button Content="Update product" Command="{Binding CommandUpdateProduct}"/>
+            </UniformGrid>
+        </Grid>
+
+        <UniformGrid Rows="2">
+            <ListBox Margin="10" ItemsSource="{Binding Products}"
+                 SelectedItem="{Binding Product}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock Text="{Binding Type}"/>
+                            <TextBlock Text="{Binding Color}"/>
+                            <TextBlock Text="{Binding Calories}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <Grid Margin="10,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBox Grid.Row="0" Grid.Column="0" Text="{Binding Product.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding Product.Type, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Grid.Row="2" Grid.Column="0" Text="{Binding Product.Color, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Grid.Row="3" Grid.Column="0" Text="{Binding Product.Calories, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <Button Grid.Row="0" Grid.Column="1" Content="Find by name" Command="{Binding CommandFindByName}"/>
+                <Button Grid.Row="1" Grid.Column="1" Content="Find by type" Command="{Binding CommandFindByType}"/>
+                <Button Grid.Row="2" Grid.Column="1" Content="Find by color" Command="{Binding CommandFindByColor}"/>
+                <Button Grid.Row="3" Grid.Column="1" Content="Find by calories" Command="{Binding CommandFindByCalories}"/>
+                <Button Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="0" Content="Show all products"
+                        Command="{Binding CommandShowAll}"/>
+            </Grid>
+        </UniformGrid>
+    </UniformGrid>
+</Window>
