@@ -31,3 +31,7 @@ C:\Users\coffe\Desktop\FruitsAndVegetables\FruitsAndVegetables\obj\Debug\FruitsA
 C:\Users\coffe\Desktop\FruitsAndVegetables\FruitsAndVegetables\obj\Debug\FruitsAndVegetables.csproj.CoreCompileInputs.cache
 C:\Users\coffe\Desktop\FruitsAndVegetables\FruitsAndVegetables\obj\Debug\FruitsAndVegetables.exe
 C:\Users\coffe\Desktop\FruitsAndVegetables\FruitsAndVegetables\obj\Debug\FruitsAndVegetables.pdb
+C:\Users\coffe\Desktop\Git(Projects)\HW DataBases\FruitsAndVegetablesMVVM\FruitsAndVegetables\obj\Debug\FruitsAndVegetables.csproj.AssemblyReference.cache
+C:\Users\coffe\Desktop\Git(Projects)\HW DataBases\FruitsAndVegetablesMVVM\FruitsAndVegetables\obj\Debug\FruitsAndVegetables.csproj.SuggestedBindingRedirects.cache
+C:\Users\coffe\Desktop\Git(Projects)\HW DataBases\FruitsAndVegetablesMVVM\FruitsAndVegetables\obj\Debug\FruitsAndVegetables.exe
+C:\Users\coffe\Desktop\Git(Projects)\HW DataBases\FruitsAndVegetablesMVVM\FruitsAndVegetables\obj\Debug\FruitsAndVegetables.pdb

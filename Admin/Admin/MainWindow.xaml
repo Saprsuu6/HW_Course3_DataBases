@@ -1,0 +1,271 @@
+﻿<Window x:Class="Admin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Admin"
+        xmlns:converters="clr-namespace:Admin.Converters"
+        xmlns:authors="clr-namespace:Admin.Authors"
+        xmlns:themes="clr-namespace:Admin.Themes"
+        xmlns:presses="clr-namespace:Admin.Press"
+        xmlns:categories="clr-namespace:Admin.Categories"
+        mc:Ignorable="d"
+        Title="Admin" Height="300" Width="500" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <converters:IdConverter x:Key="IdConverter"/>
+        <converters:NameConverter x:Key="NameConverter"/>
+        <converters:SurenameConverter x:Key="SurenameConverter"/>
+
+        <authors:ViewModel x:Key="ViewAuthors"/>
+        <categories:ViewModel x:Key="ViewCategories"/>
+        <themes:ViewModel x:Key="ViewThemes"/>
+        <presses:ViewModel x:Key="ViewPresses"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,3,0"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="Authors">
+                <UniformGrid Columns="2" DataContext="{StaticResource ViewAuthors}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" DataContext="{Binding Author}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Surename:"/>
+
+                            <TextBox Grid.Row="0" Grid.Column="1"
+                                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Grid.Row="1" Grid.Column="1"
+                                     Text="{Binding Surename, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
+
+                        <UniformGrid Rows="4" Grid.Row="1">
+                            <Button Content="Add author" Command="{Binding CommandAddAuthor}"/>
+                            <Button Content="Remove author" Command="{Binding CommandRemoveAuthor}"/>
+                            <Button Content="Update author" Command="{Binding CommandUpdateAuthor}"/>
+                            <Button Content="Clear fiels" Command="{Binding CommandClearFields}"/>
+                        </UniformGrid>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="160"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ListBox Grid.Row="0" Margin="5" ItemsSource="{Binding Authors}"
+                                 SelectedItem="{Binding Author}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Id, Converter={StaticResource IdConverter}}"/>
+                                        <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
+                                        <TextBlock Text="{Binding Surename, Converter={StaticResource SurenameConverter}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                        <UniformGrid Rows="3" Grid.Row="1">
+                            <Button Content="Find by name" Command="{Binding CommandFindByName}"/>
+                            <Button Content="Find by surename" Command="{Binding CommandFindBySurename}"/>
+                            <Button Content="Show all authors" Command="{Binding CommandShowAllAuthors}"/>
+                        </UniformGrid>
+                    </Grid>
+                </UniformGrid>
+            </TabItem>
+            
+            <TabItem Header="Books">
+            </TabItem>
+
+            <TabItem Header="Categories">
+                <UniformGrid Columns="2" DataContext="{StaticResource ViewCategories}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" DataContext="{Binding Category}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="Name:"/>
+
+                            <TextBox Grid.Column="1" 
+                                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
+
+                        <UniformGrid Rows="4" Grid.Row="1">
+                            <Button Content="Add categories" Command="{Binding CommandAddCategory}"/>
+                            <Button Content="Remove categories" Command="{Binding CommandRemoveCategory}"/>
+                            <Button Content="Update categories" Command="{Binding CommandUpdateCategory}"/>
+                            <Button Content="Clear fiels" Command="{Binding CommandClearFields}"/>
+                        </UniformGrid>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="160"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ListBox Grid.Row="0" Margin="5" ItemsSource="{Binding Categories}"
+                                 SelectedItem="{Binding Category}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Id, Converter={StaticResource IdConverter}}"/>
+                                        <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                        <UniformGrid Rows="2" Grid.Row="1">
+                            <Button Content="Find by name" Command="{Binding CommandFindByName}"/>
+                            <Button Content="Show all categories" Command="{Binding CommandShowAllCategories}"/>
+                        </UniformGrid>
+                    </Grid>
+                </UniformGrid>
+            </TabItem>
+
+            <TabItem Header="Themes">
+                <UniformGrid Columns="2" DataContext="{StaticResource ViewThemes}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" DataContext="{Binding Theme}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="Name:"/>
+
+                            <TextBox Grid.Column="1" 
+                                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
+
+                        <UniformGrid Rows="4" Grid.Row="1">
+                            <Button Content="Add categories" Command="{Binding CommandAddTheme}"/>
+                            <Button Content="Remove categories" Command="{Binding CommandRemoveTheme}"/>
+                            <Button Content="Update categories" Command="{Binding CommandUpdateTheme}"/>
+                            <Button Content="Clear fiels" Command="{Binding CommandClearFields}"/>
+                        </UniformGrid>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="160"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ListBox Grid.Row="0" Margin="5" ItemsSource="{Binding Themes}"
+                                 SelectedItem="{Binding Theme}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Id, Converter={StaticResource IdConverter}}"/>
+                                        <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                        <UniformGrid Rows="2" Grid.Row="1">
+                            <Button Content="Find by name" Command="{Binding CommandFindByName}"/>
+                            <Button Content="Show all categories" Command="{Binding CommandShowAllThemes}"/>
+                        </UniformGrid>
+                    </Grid>
+                </UniformGrid>
+            </TabItem>
+
+            <TabItem Header="Press">
+                <UniformGrid Columns="2" DataContext="{StaticResource ViewPresses}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" DataContext="{Binding Press}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:"/>
+
+                            <TextBox Grid.Column="1"
+                                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
+
+                        <UniformGrid Rows="4" Grid.Row="1">
+                            <Button Content="Add press" Command="{Binding CommandAddPress}"/>
+                            <Button Content="Remove press" Command="{Binding CommandRemovePress}"/>
+                            <Button Content="Update press" Command="{Binding CommandUpdatePress}"/>
+                            <Button Content="Clear fiels" Command="{Binding CommandClearFields}"/>
+                        </UniformGrid>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="160"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ListBox Grid.Row="0" Margin="5" ItemsSource="{Binding Presses}"
+                                 SelectedItem="{Binding Press}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Id, Converter={StaticResource IdConverter}}"/>
+                                        <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+
+                        <UniformGrid Rows="2" Grid.Row="1">
+                            <Button Content="Find by name" Command="{Binding CommandFindByName}"/>
+                            <Button Content="Show all presses" Command="{Binding CommandShowAllPresses}"/>
+                        </UniformGrid>
+                    </Grid>
+                </UniformGrid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
