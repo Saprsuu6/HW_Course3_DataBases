@@ -1,8 +1,12 @@
-﻿using Admin.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using Admin.Models;
+using Admin.Themes;
+using Admin.Categories;
+using Admin.Authors;
+using Admin.Press;
 
 namespace Admin.Books
 {
@@ -18,8 +22,7 @@ namespace Admin.Books
         public void AddNewBook(Book book)
         {
             if (book.Name == null || book.Pages == 0 || book.YearPress == 0 || book.IdPress == 0
-                || book.IdCategory == 0 || book.IdAuthor == 0 || book.IdTheme == 0 
-                || book.Comment == null || book.Quantity == 0)
+                || book.IdCategory == 0 || book.IdAuthor == 0 || book.IdTheme == 0 || book.Quantity == 0)
                 throw new ApplicationException("Book was not added.");
 
             string querry = $"Insert into Books(Name, Pages, YearPress, Id_Themes, Id_Category, Id_Author, " +
@@ -53,7 +56,7 @@ namespace Admin.Books
                 || book.Comment == null || book.Quantity == 0 || book.Id == 0)
                 throw new ApplicationException("Book was not added.");
 
-            string querry = $"delete from Books where Id={book.Id}";
+            string querry = $"delete from Books where Books.[Id]={book.Id}";
 
             SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
 
@@ -84,8 +87,8 @@ namespace Admin.Books
             string querry = $"Update Books " +
                 $"set Books.[Name]=N'{book.Name}', Pages={book.Pages}, YearPress={book.YearPress}," +
                 $"Id_Themes={book.IdTheme}, Id_Category={book.IdCategory}, Id_Author={book.IdAuthor}, " +
-                $"Id_Press={book.IdPress}, Comment={book.Comment}, Quantity={book.Quantity}" +
-                $" where Books.[Id]='{book.Id}'";
+                $"Id_Press={book.IdPress}, Comment='{book.Comment}', Quantity={book.Quantity}" +
+                $" where Books.[Id]={book.Id}";
 
             SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
 
@@ -309,6 +312,30 @@ namespace Admin.Books
             sqlConnection.Close();
 
             return books;
+        }
+
+        public List<Theme> GetAllThemes()
+        {
+            WorkWithBaseThemes workWithBase = new WorkWithBaseThemes();
+            return workWithBase.GetAllThemees();
+        }
+
+        public List<Category> GetAllCategories()
+        {
+            WorkWithBaseCategories workWithBase = new WorkWithBaseCategories();
+            return workWithBase.GetAllCategories();
+        }
+
+        public List<Author> GetAllAuthors()
+        {
+            WorkWithBaseAuthors workWithBase = new WorkWithBaseAuthors();
+            return workWithBase.GetAllAutors();
+        }
+
+        public List<Pres> GetAllPresses()
+        {
+            WorkWithBasePress workWithBase = new WorkWithBasePress();
+            return workWithBase.GetAllPresses();
         }
 
         private void ReadBooks(SqlDataReader sqlDataReader, List<Book> books)

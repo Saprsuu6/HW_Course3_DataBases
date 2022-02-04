@@ -58,12 +58,20 @@
     </ApplicationDefinition>
     <Compile Include="Books\ViewModel.cs" />
     <Compile Include="Books\WorkWithBaseBooks.cs" />
+    <Compile Include="Converters\AuthorConverter.cs" />
+    <Compile Include="Converters\CommentConverter.cs" />
+    <Compile Include="Converters\CtegoriesConverter.cs" />
     <Compile Include="Converters\IdConverter.cs" />
     <Compile Include="Converters\NameConverter.cs" />
+    <Compile Include="Converters\PageConverter.cs" />
+    <Compile Include="Converters\PressConverter.cs" />
+    <Compile Include="Converters\QuantityConverter.cs" />
     <Compile Include="Converters\SurenameConverter.cs" />
     <Compile Include="Authors\ViewModel.cs" />
     <Compile Include="Categories\ViewModelcs.cs" />
     <Compile Include="Categories\WorkWithBaseCategories.cs" />
+    <Compile Include="Converters\ThemeConverter.cs" />
+    <Compile Include="Converters\YearPressConverter.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Category.cs" />

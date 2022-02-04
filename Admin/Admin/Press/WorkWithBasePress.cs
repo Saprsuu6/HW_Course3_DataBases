@@ -119,6 +119,37 @@ namespace Admin.Press
             return presses;
         }
 
+        public Pres GetById(int Id)
+        {
+            string querry = $"select * from Press where Press.[Id]={Id}";
+
+            SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
+
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            Pres press = null;
+
+            if (!sqlDataReader.HasRows)
+            {
+                sqlConnection.Close();
+                throw new ApplicationException("No presses.");
+            }
+
+            while (sqlDataReader.Read())
+            {
+                press = new Pres()
+                {
+                    Id = sqlDataReader.GetInt32(0),
+                    Name = sqlDataReader.GetString(1),
+                };
+            }
+
+            sqlConnection.Close();
+            sqlConnection.Close();
+
+            return press;
+        }
+
         public List<Pres> GetAllPresses()
         {
             SqlCommand sqlCommand = new SqlCommand("select * from Press", sqlConnection);

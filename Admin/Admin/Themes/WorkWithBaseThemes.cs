@@ -122,6 +122,37 @@ namespace Admin.Themes
             return themes;
         }
 
+        public Theme GetById(int id)
+        {
+            string querry = $"select * from Themes where Themes.[Id]={id}";
+
+            SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
+
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            Theme theme = null;
+
+            if (!sqlDataReader.HasRows)
+            {
+                sqlConnection.Close();
+                throw new ApplicationException("No themes.");
+            }
+
+            while (sqlDataReader.Read())
+            {
+                theme = new Theme()
+                {
+                    Id = sqlDataReader.GetInt32(0),
+                    Name = sqlDataReader.GetString(1),
+                };
+            }
+
+            sqlConnection.Close();
+            sqlConnection.Close();
+
+            return theme;
+        }
+
         public List<Theme> GetAllThemees()
         {
             SqlCommand sqlCommand = new SqlCommand("select * from Themes", sqlConnection);

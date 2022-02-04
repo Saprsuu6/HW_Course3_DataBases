@@ -9,17 +9,27 @@
         xmlns:themes="clr-namespace:Admin.Themes"
         xmlns:presses="clr-namespace:Admin.Press"
         xmlns:categories="clr-namespace:Admin.Categories"
+        xmlns:books="clr-namespace:Admin.Books"
         mc:Ignorable="d"
-        Title="Admin" Height="300" Width="500" WindowStartupLocation="CenterScreen">
+        Title="Admin" Height="400" Width="600" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <converters:IdConverter x:Key="IdConverter"/>
         <converters:NameConverter x:Key="NameConverter"/>
         <converters:SurenameConverter x:Key="SurenameConverter"/>
+        <converters:AuthorConverter x:Key="AuthorConverter"/>
+        <converters:PressConverter x:Key="PressConverter"/>
+        <converters:CtegoriesConverter x:Key="CtegoriesConverter"/>
+        <converters:ThemeConverter x:Key="ThemeConverter"/>
+        <converters:PageConverter x:Key="PageConverter"/>
+        <converters:YearPressConverter x:Key="YearPressConverter"/>
+        <converters:CommentConverter x:Key="CommentConverter"/>
+        <converters:QuantityConverter x:Key="QuantityConverter"/>
 
         <authors:ViewModel x:Key="ViewAuthors"/>
         <categories:ViewModel x:Key="ViewCategories"/>
         <themes:ViewModel x:Key="ViewThemes"/>
         <presses:ViewModel x:Key="ViewPresses"/>
+        <books:ViewModel x:Key="ViewBooks"/>
 
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -33,6 +43,10 @@
 
         <Style TargetType="Button">
             <Setter Property="Margin" Value="2"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,2,3,2"/>
         </Style>
     </Window.Resources>
 
@@ -76,7 +90,7 @@
 
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="160"/>
+                            <RowDefinition Height="200"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
@@ -103,6 +117,112 @@
             </TabItem>
             
             <TabItem Header="Books">
+                <UniformGrid Columns="3" DataContext="{StaticResource ViewBooks}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="220"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Pages:"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="Year press:"/>
+                            <TextBlock Grid.Row="3" Grid.Column="0" Text="Presses:"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" Text="Authors:"/>
+                            <TextBlock Grid.Row="5" Grid.Column="0" Text="Categories:"/>
+                            <TextBlock Grid.Row="6" Grid.Column="0" Text="Themes:"/>
+                            <TextBlock Grid.Row="7" Grid.Column="0" Text="Coment:"/>
+                            <TextBlock Grid.Row="8" Grid.Column="0" Text="Quantity:"/>
+
+                            <TextBox Grid.Row="0" Grid.Column="1" 
+                                     Text="{Binding Book.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Grid.Row="1" Grid.Column="1" 
+                                     Text="{Binding Book.Pages, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" 
+                                     Text="{Binding Book.YearPress, UpdateSourceTrigger=PropertyChanged}"/>
+
+                            <ComboBox Grid.Row="3" Grid.Column="1"
+                                      ItemsSource="{Binding Presses}"
+                                      SelectedItem="{Binding Press}"
+                                      DisplayMemberPath="Name" SelectedIndex="0"/>
+                            <ComboBox Grid.Row="4" Grid.Column="1"
+                                      ItemsSource="{Binding Authors}"
+                                      SelectedItem="{Binding Author}"
+                                      DisplayMemberPath="Name" SelectedIndex="0"/>
+                            <ComboBox Grid.Row="5" Grid.Column="1"
+                                      ItemsSource="{Binding Categories}"
+                                      SelectedItem="{Binding Category}"
+                                      DisplayMemberPath="Name" SelectedIndex="0"/>
+                            <ComboBox Grid.Row="6" Grid.Column="1"
+                                      ItemsSource="{Binding Themes}"
+                                      SelectedItem="{Binding Theme}"
+                                      DisplayMemberPath="Name" SelectedIndex="0"/>
+
+                            <TextBox Grid.Row="7" Grid.Column="1" 
+                                     Text="{Binding Book.Comment, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Grid.Row="8" Grid.Column="1" 
+                                     Text="{Binding Book.Quantity, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
+
+                        <UniformGrid Rows="4" Grid.Row="1">
+                            <Button Content="Add book" Command="{Binding CommandAddBook}"/>
+                            <Button Content="Remove book" Command="{Binding CommandRemoveBook}"/>
+                            <Button Content="Update book" Command="{Binding CommandUpdateBook}"/>
+                            <Button Content="Clear fiels" Command="{Binding CommandClearFields}"/>
+                        </UniformGrid>
+                    </Grid>
+
+                    <Grid>
+                        <ListBox Margin="5" ItemsSource="{Binding Books}"
+                                 SelectedItem="{Binding Book}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Id, Converter={StaticResource IdConverter}}"/>
+                                        <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
+                                        <TextBlock Text="{Binding Pages, Converter={StaticResource PageConverter}}"/>
+                                        <TextBlock Text="{Binding YearPress, Converter={StaticResource YearPressConverter}}"/>
+                                        <TextBlock Text="{Binding IdPress, Converter={StaticResource PressConverter}}"/>
+                                        <TextBlock Text="{Binding IdAuthor, Converter={StaticResource AuthorConverter}}"/>
+                                        <TextBlock Text="{Binding IdCategory, Converter={StaticResource CtegoriesConverter}}"/>
+                                        <TextBlock Text="{Binding IdTheme, Converter={StaticResource ThemeConverter}}"/>
+                                        <TextBlock Text="{Binding Comment, Converter={StaticResource CommentConverter}}"/>
+                                        <TextBlock Text="{Binding Quantity, Converter={StaticResource QuantityConverter}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+
+                    <UniformGrid Rows="8" Grid.Row="1">
+                        <Button Content="Find by name" Command="{Binding CommandFindByName}"/>
+                        <Button Content="Find by amount pages" Command="{Binding CommandFindByPages}"/>
+                        <Button Content="Find by year press" Command="{Binding CommandFindByYearPress}"/>
+                        <Button Content="Find by press" Command="{Binding CommandFindByIdPress}"/>
+                        <Button Content="Find by author" Command="{Binding CommandFindByIdAutor}"/>
+                        <Button Content="Find by categories" Command="{Binding CommandFindByIdCategory}"/>
+                        <Button Content="Find by theme" Command="{Binding CommandFindByIdTheme}"/>
+                        <Button Content="Find by quantity" Command="{Binding CommandFindByQuantity}"/>
+                    </UniformGrid>
+                </UniformGrid>
             </TabItem>
 
             <TabItem Header="Categories">
@@ -135,7 +255,7 @@
 
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="160"/>
+                            <RowDefinition Height="220"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
@@ -180,16 +300,16 @@
                         </Grid>
 
                         <UniformGrid Rows="4" Grid.Row="1">
-                            <Button Content="Add categories" Command="{Binding CommandAddTheme}"/>
-                            <Button Content="Remove categories" Command="{Binding CommandRemoveTheme}"/>
-                            <Button Content="Update categories" Command="{Binding CommandUpdateTheme}"/>
+                            <Button Content="Add category" Command="{Binding CommandAddTheme}"/>
+                            <Button Content="Remove category" Command="{Binding CommandRemoveTheme}"/>
+                            <Button Content="Update category" Command="{Binding CommandUpdateTheme}"/>
                             <Button Content="Clear fiels" Command="{Binding CommandClearFields}"/>
                         </UniformGrid>
                     </Grid>
 
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="160"/>
+                            <RowDefinition Height="220"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
@@ -243,7 +363,7 @@
 
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="160"/>
+                            <RowDefinition Height="220"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 

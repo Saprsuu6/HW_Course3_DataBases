@@ -122,6 +122,37 @@ namespace Admin.Categories
             return categories;
         }
 
+        public Category GetById(int id)
+        {
+            string querry = $"select * from Categories where Categories.[Id]={id}";
+
+            SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
+
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            Category category = null;
+
+            if (!sqlDataReader.HasRows)
+            {
+                sqlConnection.Close();
+                throw new ApplicationException("No categories.");
+            }
+
+            while (sqlDataReader.Read())
+            {
+                category = new Category()
+                {
+                    Id = sqlDataReader.GetInt32(0),
+                    Name = sqlDataReader.GetString(1),
+                };
+            }
+
+            sqlConnection.Close();
+            sqlConnection.Close();
+
+            return category;
+        }
+
         public List<Category> GetAllCategories()
         {
             SqlCommand sqlCommand = new SqlCommand("select * from Categories", sqlConnection);

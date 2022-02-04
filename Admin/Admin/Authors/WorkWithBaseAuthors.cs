@@ -145,6 +145,37 @@ namespace Admin
             return authors;
         }
 
+        public Author GetById(int id)
+        {
+            string querry = $"select * from Authors where Authors.[Id]={id}";
+
+            SqlCommand sqlCommand = new SqlCommand(querry, sqlConnection);
+
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            Author author = null; 
+
+            if (!sqlDataReader.HasRows)
+            {
+                sqlConnection.Close();
+                throw new ApplicationException("No authors.");
+            }
+
+            while (sqlDataReader.Read())
+            {
+                author = new Author()
+                {
+                    Id = sqlDataReader.GetInt32(0),
+                    Name = sqlDataReader.GetString(1),
+                };
+            }
+
+            sqlConnection.Close();
+            sqlConnection.Close();
+
+            return author;
+        }
+
         public List<Author> GetAllAutors()
         {
             SqlCommand sqlCommand = new SqlCommand("select * from Authors", sqlConnection);
