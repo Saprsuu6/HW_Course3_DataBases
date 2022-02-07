@@ -159,7 +159,7 @@
                             <TextBox Grid.Row="2" Grid.Column="1" 
                                      Text="{Binding Book.YearPress, UpdateSourceTrigger=PropertyChanged}"/>
 
-                            <ComboBox Grid.Row="3" Grid.Column="1"
+                            <ComboBox Grid.Row="3" Grid.Column="1" Name="Combo"
                                       ItemsSource="{Binding Presses}"
                                       SelectedItem="{Binding Press}"
                                       DisplayMemberPath="Name" SelectedIndex="0"/>

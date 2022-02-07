@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lib>
+	<book Id="0" Name="MyBook" Pages="123" YearPress="2002" Id_Themes="1" Id_Category="1" Id_Author="1" Id_Press="1" Comment="Book" Quantity="2" />	
+</lib>
