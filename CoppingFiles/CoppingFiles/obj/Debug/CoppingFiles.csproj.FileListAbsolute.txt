@@ -9,3 +9,14 @@ C:\Users\coffe\source\repos\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.csp
 C:\Users\coffe\source\repos\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.csproj.CoreCompileInputs.cache
 C:\Users\coffe\source\repos\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.exe
 C:\Users\coffe\source\repos\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.pdb
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\bin\Debug\CoppingFiles.exe.config
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\bin\Debug\CoppingFiles.exe
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\bin\Debug\CoppingFiles.pdb
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.csproj.AssemblyReference.cache
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.csproj.SuggestedBindingRedirects.cache
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.Form1.resources
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.Properties.Resources.resources
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.csproj.GenerateResource.cache
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.csproj.CoreCompileInputs.cache
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.exe
+C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\CoppingFiles\CoppingFiles\obj\Debug\CoppingFiles.pdb

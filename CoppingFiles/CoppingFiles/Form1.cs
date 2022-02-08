@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,7 +43,7 @@ namespace CoppingFiles
 
         private void WriteToFile(byte[] bytes)
         {
-            string path =  To.Text + "\\" + fileName;
+            string path = To.Text + "\\" + fileName;
 
             using (FileStream stream = File.Open(path, FileMode.OpenOrCreate))
             {
@@ -76,20 +69,27 @@ namespace CoppingFiles
                         counter = temp;
                         writer.Write(buffer);
 
+                        Progress.Invoke(
+                            new Action(() => Progress.Value += Progress.Step));
                     }
+
+                    Progress.Invoke(
+                        new Action(() => Progress.Value = 0));
                 }
             }
         }
 
-        private async void CoppyFile(ProgressBar progressBar)
+        private async void CoppyFile()
         {
             byte[] bytes = await Task.Run(() => Read());
 
-            //progressBar.Maximum = bytes.Length;
-            //progressBar.Step = bytes.Length / (int)limit;
+            Progress.Invoke(
+                new Action(() => Progress.Maximum = bytes.Length * (int)limit));
+            Progress.Invoke(
+                 new Action(() => Progress.Step = (int)limit));
 
             if (bytes.Length <= 4096)
-                MessageBox.Show("File size less then 4096", "", 
+                MessageBox.Show("File size less then 4096", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("File size more then 4096", "",
@@ -103,7 +103,7 @@ namespace CoppingFiles
 
         private void Copy_Click(object sender, EventArgs e)
         {
-            Task.Run(() => CoppyFile(Progress));
+            Task.Run(() => CoppyFile());
         }
     }
 }
