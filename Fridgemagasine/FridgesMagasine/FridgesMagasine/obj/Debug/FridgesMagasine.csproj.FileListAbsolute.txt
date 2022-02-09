@@ -1,0 +1,11 @@
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\bin\Debug\FridgesMagasine.exe.config
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\bin\Debug\FridgesMagasine.exe
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\bin\Debug\FridgesMagasine.pdb
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\obj\Debug\FridgesMagasine.csproj.AssemblyReference.cache
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\obj\Debug\FridgesMagasine.csproj.SuggestedBindingRedirects.cache
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\obj\Debug\FridgesMagasine.Form1.resources
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\obj\Debug\FridgesMagasine.Properties.Resources.resources
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\obj\Debug\FridgesMagasine.csproj.GenerateResource.cache
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\obj\Debug\FridgesMagasine.csproj.CoreCompileInputs.cache
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\obj\Debug\FridgesMagasine.exe
+C:\Users\coffe\source\repos\FridgesMagasine\FridgesMagasine\obj\Debug\FridgesMagasine.pdb

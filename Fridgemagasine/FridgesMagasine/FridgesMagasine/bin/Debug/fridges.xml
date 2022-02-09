@@ -1,0 +1,17 @@
+<NewDataSet>
+  <Table>
+    <Name>LG</Name>
+    <Price>7000</Price>
+    <Id_Saler>2002</Id_Saler>
+  </Table>
+  <Table>
+    <Name>Samsung</Name>
+    <Price>10000</Price>
+    <Id_Saler>2003</Id_Saler>
+  </Table>
+  <Table>
+    <Name>Bosh</Name>
+    <Price>8000</Price>
+    <Id_Saler>2004</Id_Saler>
+  </Table>
+</NewDataSet>

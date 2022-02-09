@@ -1,0 +1,17 @@
+<NewDataSet>
+  <Table>
+    <Id>2002</Id>
+    <Name>Andry</Name>
+    <Surename>Saprigin</Surename>
+  </Table>
+  <Table>
+    <Id>2003</Id>
+    <Name>Max</Name>
+    <Surename>Voloshin</Surename>
+  </Table>
+  <Table>
+    <Id>2004</Id>
+    <Name>Kira</Name>
+    <Surename>Belocurova</Surename>
+  </Table>
+</NewDataSet>
