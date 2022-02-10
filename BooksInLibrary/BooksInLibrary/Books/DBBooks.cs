@@ -27,7 +27,7 @@ namespace BooksInLibrary.Books
 
         public void AddBook(Book book)
         {
-            if (book.Name == null || book.Pages == 0
+            if (book.Name == null || book.Name.Trim() == "" || book.Pages == 0
                 || book.YearPress == 0 || book.Quantity == 0
                 || book.IdAuthor == 0 || book.IdPress == 0
                 || book.IdCategory == 0 || book.IdTheme == 0)
@@ -46,7 +46,7 @@ namespace BooksInLibrary.Books
 
         public void RemoveBook(Book book)
         {
-            if (book.Name == null || book.Pages == 0
+            if (book.Name == null || book.Name.Trim() == "" || book.Pages == 0
                 || book.YearPress == 0 || book.Quantity == 0
                 || book.IdAuthor == 0 || book.IdPress == 0
                 || book.IdCategory == 0 || book.IdTheme == 0)
@@ -65,7 +65,7 @@ namespace BooksInLibrary.Books
 
         public void UpdateBook(Book book)
         {
-            if (book.Name == null || book.Pages == 0
+            if (book.Name == null || book.Name.Trim() == "" || book.Pages == 0
                 || book.YearPress == 0 || book.Quantity == 0
                 || book.IdAuthor == 0 || book.IdPress == 0
                 || book.IdCategory == 0 || book.IdTheme == 0)
@@ -88,7 +88,7 @@ namespace BooksInLibrary.Books
 
         public List<Book> FindAuthors(Book book)
         {
-            if (book.Name == null || book.Pages == 0
+            if (book.Name == null || book.Name.Trim() == "" || book.Pages == 0
                 || book.YearPress == 0 || book.Quantity == 0
                 || book.IdAuthor == 0 || book.IdPress == 0
                 || book.IdCategory == 0 || book.IdTheme == 0)
@@ -139,9 +139,45 @@ namespace BooksInLibrary.Books
         public List<Press> GetAllPressess()
         {
             List<Press> presses = (from press in dataBase.Presses
-                                    select press).ToList();
+                                   select press).ToList();
 
             return presses;
+        }
+
+        public Theme GetThemeById(int id)
+        {
+            var theme = from concreteTheme in dataBase.Themes
+                        where concreteTheme.Id == id
+                        select concreteTheme;
+
+            return theme.ToList()[0];
+        }
+
+        public Category GetCategoryById(int id)
+        {
+            var categories = from concreteCategory in dataBase.Categories
+                             where concreteCategory.Id == id
+                             select concreteCategory;
+
+            return categories.ToList()[0];
+        }
+
+        public Author GetAuthorById(int id)
+        {
+            var author = from concreteAuthor in dataBase.Authors
+                         where concreteAuthor.Id == id
+                         select concreteAuthor;
+
+            return author.ToList()[0];
+        }
+
+        public Press GetPressById(int id)
+        {
+            var press = from concretePress in dataBase.Presses
+                        where concretePress.Id == id
+                        select concretePress;
+
+            return press.ToList()[0];
         }
     }
 }

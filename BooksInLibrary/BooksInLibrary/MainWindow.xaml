@@ -231,7 +231,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
-                        <GroupBox Header="Author"  Margin="5">
+                        <GroupBox Header="Author" Margin="5">
                             <Grid Grid.Row="0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="80"/>
@@ -316,23 +316,23 @@
                                          Text="{Binding Book.Pages, UpdateSourceTrigger=PropertyChanged}"/>
                                 <TextBox Grid.Row="2" Grid.Column="1"
                                          Text="{Binding Book.YearPress, UpdateSourceTrigger=PropertyChanged}"/>
-                                
+
                                 <ComboBox Grid.Row="3" Grid.Column="1"
                                           ItemsSource="{Binding Themes}"
-                                          SelectedItem="{Binding Theme, UpdateSourceTrigger=PropertyChanged}"
-                                          DisplayMemberPath="Name" SelectedIndex="0"/>
+                                          SelectedItem="{Binding Theme}"
+                                          DisplayMemberPath="Name"/>
                                 <ComboBox Grid.Row="4" Grid.Column="1"
                                           ItemsSource="{Binding Categories}"
-                                          SelectedItem="{Binding Category, UpdateSourceTrigger=PropertyChanged}"
-                                          DisplayMemberPath="Name" SelectedIndex="0"/>
+                                          SelectedItem="{Binding Category}"
+                                          DisplayMemberPath="Name"/>
                                 <ComboBox Grid.Row="5" Grid.Column="1"
                                           ItemsSource="{Binding Authors}"
-                                          SelectedValue="{Binding Author, UpdateSourceTrigger=PropertyChanged}"
-                                          DisplayMemberPath="Name" SelectedIndex="0"/>
+                                          SelectedValue="{Binding Author}"
+                                          DisplayMemberPath="Name"/>
                                 <ComboBox Grid.Row="6" Grid.Column="1"
                                           ItemsSource="{Binding Presses}"
-                                          SelectedItem="{Binding Press, UpdateSourceTrigger=PropertyChanged}"
-                                          DisplayMemberPath="Name" SelectedIndex="0"/>
+                                          SelectedItem="{Binding Press}"
+                                          DisplayMemberPath="Name"/>
                                 
                                 <TextBox Grid.Row="7" Grid.Column="1"
                                          Text="{Binding Book.Comment, UpdateSourceTrigger=PropertyChanged}"/>
