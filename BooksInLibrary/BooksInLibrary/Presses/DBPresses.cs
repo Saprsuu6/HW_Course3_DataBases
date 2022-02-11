@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BooksInLibrary.Presses
 {
@@ -19,7 +17,7 @@ namespace BooksInLibrary.Presses
         public List<Press> GetAllPresses()
         {
             List<Press> presses = (from press in dataBase.Presses
-                                    select press).ToList();
+                                   select press).ToList();
 
             if (presses.Count == 0)
                 throw new ApplicationException("No authors");
@@ -43,10 +41,31 @@ namespace BooksInLibrary.Presses
             }
         }
 
+        private void RemoveBookWithPressId(int id)
+        {
+            var books = (from book in dataBase.Books
+                         where book.IdPress == id
+                         select book).ToList();
+
+            try
+            {
+                foreach (Book book in books)
+                    dataBase.Books.DeleteOnSubmit(book);
+
+                dataBase.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Book with this press was not succesfully removed. Try again");
+            }
+        }
+
         public void RemovePress(Press press)
         {
             if (press.Name == null || press.Name.Trim() == "")
                 throw new ApplicationException("Please select press.");
+
+            RemoveBookWithPressId(press.Id);
 
             try
             {
@@ -85,8 +104,8 @@ namespace BooksInLibrary.Presses
                 throw new ApplicationException("Fill category's info.");
 
             List<Press> presses = (from concretePress in dataBase.Presses
-                                    where concretePress.Name.Contains(press.Name)
-                                    select concretePress).ToList();
+                                   where concretePress.Name.Contains(press.Name)
+                                   select concretePress).ToList();
 
             if (presses.Count == 0)
                 throw new ApplicationException("No authors");

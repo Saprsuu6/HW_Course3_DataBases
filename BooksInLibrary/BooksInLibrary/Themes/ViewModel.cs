@@ -180,6 +180,9 @@ namespace BooksInLibrary.Themes
                 {
                     List<Theme> categories = await Task.Run(() => dataBase.GetAllThemes());
                     Themes = new ObservableCollection<Theme>(categories);
+
+                    MessageBox.Show("Base was succesully refreshed.", "",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
                 });
             }
         }

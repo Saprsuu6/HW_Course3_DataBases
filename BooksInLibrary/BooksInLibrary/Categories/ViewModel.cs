@@ -180,6 +180,9 @@ namespace BooksInLibrary.Categories
                 {
                     List<Category> categories = await Task.Run(() => dataBase.GetAllCtegories());
                     Categories = new ObservableCollection<Category>(categories);
+
+                    MessageBox.Show("Base was succesully refreshed.", "",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
                 });
             }
         }

@@ -43,10 +43,31 @@ namespace BooksInLibrary.Categories
             }
         }
 
+        private void RemoveBooksWithCategoryId(int id)
+        {
+            var books = (from book in dataBase.Books
+                         where book.IdCategory == id
+                         select book).ToList();
+
+            try
+            {
+                foreach (Book book in books)
+                    dataBase.Books.DeleteOnSubmit(book);
+
+                dataBase.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Book with this category was not succesfully removed. Try again");
+            }
+        }
+
         public void RemoveCategory(Category category)
         {
             if (category.Name == null || category.Name.Trim() == "")
                 throw new ApplicationException("Please select category.");
+
+            RemoveBooksWithCategoryId(category.Id);
 
             try
             {

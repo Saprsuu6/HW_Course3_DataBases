@@ -42,11 +42,32 @@ namespace BooksInLibrary.Authors
             }
         }
 
+        private void RemoveBooksWithAuthorId(int id)
+        {
+            var books = (from book in dataBase.Books
+                         where book.IdAuthor == id
+                         select book).ToList();
+
+            try
+            {
+                foreach (Book book in books)
+                    dataBase.Books.DeleteOnSubmit(book);
+
+                dataBase.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Book with this author was not succesfully removed. Try again");
+            }
+        }
+
         public void RemoveAuthor(Author author)
         {
             if (author.Name == null || author.Surename == null
                 || author.Name.Trim() == "" || author.Surename.Trim() == "")
                 throw new ApplicationException("Please select author.");
+
+            RemoveBooksWithAuthorId(author.Id);
 
             try
             {

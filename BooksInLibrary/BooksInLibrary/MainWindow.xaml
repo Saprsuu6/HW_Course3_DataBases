@@ -43,6 +43,8 @@
         <converters:BookCommentConverter x:Key="BookCommentConverter"/>
         <converters:BookQuantityConverter x:Key="BookQuantityConverter"/>
 
+        <converters:NumericConverter x:Key="NumericConverter"/>
+
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -87,9 +89,11 @@
                                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Surename:"/>
 
                                 <TextBox Grid.Row="0" Grid.Column="1"
-                                         Text="{Binding Author.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Author.Name,
+                                    UpdateSourceTrigger=PropertyChanged}"/>
                                 <TextBox Grid.Row="1" Grid.Column="1"
-                                         Text="{Binding Author.Surename, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Author.Surename,
+                                    UpdateSourceTrigger=PropertyChanged}"/>
                             </Grid>
                         </GroupBox>
 
@@ -141,7 +145,8 @@
                                 <TextBlock Grid.Column="0" Text="Name:"/>
 
                                 <TextBox Grid.Column="1"
-                                         Text="{Binding Press.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Press.Name,
+                                    UpdateSourceTrigger=PropertyChanged}"/>
                             </Grid>
                         </GroupBox>
 
@@ -191,7 +196,8 @@
                                 <TextBlock Grid.Column="0" Text="Name:"/>
 
                                 <TextBox Grid.Column="1"
-                                         Text="{Binding Category.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Category.Name,
+                                    UpdateSourceTrigger=PropertyChanged}"/>
                             </Grid>
                         </GroupBox>
 
@@ -199,7 +205,7 @@
                             <Button Content="Add category" Command="{Binding AddCategory}"/>
                             <Button Content="Remove category" Command="{Binding RemoveCategory}"/>
                             <Button Content="Update category" Command="{Binding UpdateCategory}"/>
-                            <Button Content="Find category" Command="{Binding FindCategories}"/>
+                            <Button Content="Find categories" Command="{Binding FindCategories}"/>
                             <Button Content="Clear fiels" Command="{Binding ClearFields}"/>
                             <Button Content="Refresh base" Command="{Binding RefreshBase}"/>
                         </UniformGrid>
@@ -246,10 +252,10 @@
                         </GroupBox>
 
                         <UniformGrid Rows="6" Grid.Row="1">
-                            <Button Content="Add category" Command="{Binding AddTheme}"/>
-                            <Button Content="Remove category" Command="{Binding RemoveTheme}"/>
-                            <Button Content="Update category" Command="{Binding UpdateTheme}"/>
-                            <Button Content="Find category" Command="{Binding FindThemes}"/>
+                            <Button Content="Add theme" Command="{Binding AddTheme}"/>
+                            <Button Content="Remove theme" Command="{Binding RemoveTheme}"/>
+                            <Button Content="Update theme" Command="{Binding UpdateTheme}"/>
+                            <Button Content="Find themes" Command="{Binding FindThemes}"/>
                             <Button Content="Clear fiels" Command="{Binding ClearFields}"/>
                             <Button Content="Refresh base" Command="{Binding RefreshBase}"/>
                         </UniformGrid>
@@ -311,11 +317,16 @@
                                 <TextBlock Grid.Row="8" Grid.Column="0" Text="Quantity:"/>
                                 
                                 <TextBox Grid.Row="0" Grid.Column="1"
-                                         Text="{Binding Book.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Book.Name, 
+                                    UpdateSourceTrigger=PropertyChanged}"/>
                                 <TextBox Grid.Row="1" Grid.Column="1"
-                                         Text="{Binding Book.Pages, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Book.Pages, 
+                                    UpdateSourceTrigger=PropertyChanged,
+                                    Converter={StaticResource NumericConverter}}"/>
                                 <TextBox Grid.Row="2" Grid.Column="1"
-                                         Text="{Binding Book.YearPress, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Book.YearPress,
+                                    UpdateSourceTrigger=PropertyChanged,
+                                    Converter={StaticResource NumericConverter}}"/>
 
                                 <ComboBox Grid.Row="3" Grid.Column="1"
                                           ItemsSource="{Binding Themes}"
@@ -335,9 +346,12 @@
                                           DisplayMemberPath="Name"/>
                                 
                                 <TextBox Grid.Row="7" Grid.Column="1"
-                                         Text="{Binding Book.Comment, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Book.Comment, 
+                                    UpdateSourceTrigger=PropertyChanged}"/>
                                 <TextBox Grid.Row="8" Grid.Column="1"
-                                         Text="{Binding Book.Quantity, UpdateSourceTrigger=PropertyChanged}"/>
+                                         Text="{Binding Book.Quantity,
+                                    UpdateSourceTrigger=PropertyChanged,
+                                    Converter={StaticResource NumericConverter}}"/>
                             </Grid>
                         </GroupBox>
 
@@ -357,16 +371,26 @@
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <TextBlock Text="{Binding Id, Converter={StaticResource BookIdConverter}}"/>
-                                        <TextBlock Text="{Binding Name, Converter={StaticResource BookNameConverter}}"/>
-                                        <TextBlock Text="{Binding Pages, Converter={StaticResource BookPagesConverter}}"/>
-                                        <TextBlock Text="{Binding YearPress, Converter={StaticResource BookYearPressConverter}}"/>
-                                        <TextBlock Text="{Binding IdTheme, Converter={StaticResource BookThemeConverter}}"/>
-                                        <TextBlock Text="{Binding IdCategory, Converter={StaticResource BookCategoryConverter}}"/>
-                                        <TextBlock Text="{Binding IdAuthor, Converter={StaticResource BookAuthorConverter}}"/>
-                                        <TextBlock Text="{Binding IdPress, Converter={StaticResource BookPressConverter}}"/>
-                                        <TextBlock Text="{Binding Comment, Converter={StaticResource BookCommentConverter}}"/>
-                                        <TextBlock Text="{Binding Quantity, Converter={StaticResource BookQuantityConverter}}"/>
+                                        <TextBlock Text="{Binding Id, 
+                                            Converter={StaticResource BookIdConverter}}"/>
+                                        <TextBlock Text="{Binding Name,
+                                            Converter={StaticResource BookNameConverter}}"/>
+                                        <TextBlock Text="{Binding Pages, 
+                                            Converter={StaticResource BookPagesConverter}}"/>
+                                        <TextBlock Text="{Binding YearPress,
+                                            Converter={StaticResource BookYearPressConverter}}"/>
+                                        <TextBlock Text="{Binding IdTheme,
+                                            Converter={StaticResource BookThemeConverter}}"/>
+                                        <TextBlock Text="{Binding IdCategory,
+                                            Converter={StaticResource BookCategoryConverter}}"/>
+                                        <TextBlock Text="{Binding IdAuthor, 
+                                            Converter={StaticResource BookAuthorConverter}}"/>
+                                        <TextBlock Text="{Binding IdPress, 
+                                            Converter={StaticResource BookPressConverter}}"/>
+                                        <TextBlock Text="{Binding Comment,
+                                            Converter={StaticResource BookCommentConverter}}"/>
+                                        <TextBlock Text="{Binding Quantity,
+                                            Converter={StaticResource BookQuantityConverter}}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>

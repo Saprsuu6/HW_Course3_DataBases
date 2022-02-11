@@ -179,6 +179,9 @@ namespace BooksInLibrary.Presses
                 {
                     List<Press> presses = await Task.Run(() => dataBase.GetAllPresses());
                     Presses = new ObservableCollection<Press>(presses);
+
+                    MessageBox.Show("Base was succesully refreshed.", "",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
                 });
             }
         }

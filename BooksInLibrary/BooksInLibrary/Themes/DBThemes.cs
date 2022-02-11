@@ -41,10 +41,31 @@ namespace BooksInLibrary.Themes
             }
         }
 
+        private void RemoveBooksWithThemeId(int id)
+        {
+            var books = (from book in dataBase.Books
+                         where book.IdTheme == id
+                         select book).ToList();
+
+            try
+            {
+                foreach (Book book in books)
+                    dataBase.Books.DeleteOnSubmit(book);
+
+                dataBase.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Book with this theme was not succesfully removed. Try again");
+            }
+        }
+
         public void RemoveTheme(Theme theme)
         {
             if (theme.Name == null || theme.Name.Trim() == "")
                 throw new ApplicationException("Please select category.");
+
+            RemoveBooksWithThemeId(theme.Id);
 
             try
             {

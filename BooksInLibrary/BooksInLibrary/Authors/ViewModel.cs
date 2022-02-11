@@ -179,6 +179,9 @@ namespace BooksInLibrary.Authors
                 {
                     List<Author> authors = await Task.Run(() => dataBase.GetAllAuthors());
                     Authors = new ObservableCollection<Author>(authors);
+
+                    MessageBox.Show("Base was succesully refreshed.", "",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
                 });
             }
         }

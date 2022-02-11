@@ -35,32 +35,53 @@ namespace BooksInLibrary.Books
             author = new Author();
             press = new Press();
             dataBase = new DBBooks();
-
-            FillList();
         }
 
-        private async void FillList()
+
+        private async void UpdateBooksList()
+        {
+            List<Book> books = await Task.Run(() => dataBase.GetAllBooks());
+            Books = new ObservableCollection<Book>(books);
+        }
+
+        private async void UpdateAuthorsList()
+        {
+            List<Author> authors = await Task.Run(() => dataBase.GetAllAuthors());
+            Authors = new ObservableCollection<Author>(authors);
+            Author = authors[0];
+        }
+
+        private async void UpdatePressesList()
+        {
+            List<Press> presses = await Task.Run(() => dataBase.GetAllPressess());
+            Presses = new ObservableCollection<Press>(presses);
+            Press = presses[0];
+        }
+
+        private async void UpdateCategoriesList()
+        {
+            List<Category> categories = await Task.Run(() => dataBase.GetAllCategories());
+            Categories = new ObservableCollection<Category>(categories);
+            Category = categories[0];
+        }
+
+        private async void UpdateThemesList()
+        {
+            List<Theme> themes = await Task.Run(() => dataBase.GetAllThemes());
+            Themes = new ObservableCollection<Theme>(themes);
+            Theme = themes[0];
+        }
+
+
+        private void FillList()
         {
             try
             {
-                List<Book> books = await Task.Run(() => dataBase.GetAllBooks());
-                Books = new ObservableCollection<Book>(books);
-
-                List<Author> authors = await Task.Run(() => dataBase.GetAllAuthors());
-                Authors = new ObservableCollection<Author>(authors);
-                Author = authors[0];
-
-                List<Press> presses = await Task.Run(() => dataBase.GetAllPressess());
-                Presses = new ObservableCollection<Press>(presses);
-                Press = presses[0];
-
-                List<Category> categories = await Task.Run(() => dataBase.GetAllCategories());
-                Categories = new ObservableCollection<Category>(categories);
-                Category = categories[0];
-
-                List<Theme> themes = await Task.Run(() => dataBase.GetAllThemes());
-                Themes = new ObservableCollection<Theme>(themes);
-                Theme = themes[0];
+                UpdateBooksList();
+                UpdateAuthorsList();
+                UpdatePressesList();
+                UpdateCategoriesList();
+                UpdateThemesList();
             }
             catch (Exception)
             {
@@ -311,10 +332,12 @@ namespace BooksInLibrary.Books
         {
             get
             {
-                return command = new RelayCommand(async obj =>
+                return command = new RelayCommand(obj =>
                 {
-                    List<Book> books = await Task.Run(() => dataBase.GetAllBooks());
-                    Books = new ObservableCollection<Book>(books);
+                    FillList();
+
+                    MessageBox.Show("Base was succesully refreshed.", "",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
                 });
             }
         }
