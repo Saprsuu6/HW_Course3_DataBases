@@ -35,6 +35,8 @@ namespace BooksInLibrary.Books
             author = new Author();
             press = new Press();
             dataBase = new DBBooks();
+
+            FillList();
         }
 
 
@@ -334,7 +336,7 @@ namespace BooksInLibrary.Books
             {
                 return command = new RelayCommand(obj =>
                 {
-                    FillList();
+                    UpdateBooksList();
 
                     MessageBox.Show("Base was succesully refreshed.", "",
                             MessageBoxButton.OK, MessageBoxImage.Information);
