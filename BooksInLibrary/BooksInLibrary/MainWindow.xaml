@@ -315,7 +315,7 @@
                                 <TextBlock Grid.Row="6" Grid.Column="0" Text="Press:"/>
                                 <TextBlock Grid.Row="7" Grid.Column="0" Text="Comment:"/>
                                 <TextBlock Grid.Row="8" Grid.Column="0" Text="Quantity:"/>
-                                
+
                                 <TextBox Grid.Row="0" Grid.Column="1"
                                          Text="{Binding Book.Name, 
                                     UpdateSourceTrigger=PropertyChanged}"/>
@@ -344,7 +344,7 @@
                                           ItemsSource="{Binding Presses}"
                                           SelectedItem="{Binding Press}"
                                           DisplayMemberPath="Name"/>
-                                
+
                                 <TextBox Grid.Row="7" Grid.Column="1"
                                          Text="{Binding Book.Comment, 
                                     UpdateSourceTrigger=PropertyChanged}"/>
@@ -359,7 +359,7 @@
                             <Button Content="Add book" Command="{Binding AddBook}"/>
                             <Button Content="Remove book" Command="{Binding RemoveBook}"/>
                             <Button Content="Update book" Command="{Binding UpdateBook}"/>
-                            <Button Content="Find book" Command="{Binding FindBooks}"/>
+                            <Button Content="Find books" Command="{Binding FindBooks}"/>
                             <Button Content="Clear fiels" Command="{Binding ClearFields}"/>
                             <Button Content="Refresh base" Command="{Binding RefreshBase}"/>
                         </UniformGrid>

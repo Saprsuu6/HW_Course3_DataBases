@@ -1,15 +1,18 @@
 <NewDataSet>
   <Table>
+    <Id>1003</Id>
     <Name>LG</Name>
     <Price>7000</Price>
     <Id_Saler>2002</Id_Saler>
   </Table>
   <Table>
+    <Id>1004</Id>
     <Name>Samsung</Name>
     <Price>10000</Price>
     <Id_Saler>2003</Id_Saler>
   </Table>
   <Table>
+    <Id>1005</Id>
     <Name>Bosh</Name>
     <Price>8000</Price>
     <Id_Saler>2004</Id_Saler>

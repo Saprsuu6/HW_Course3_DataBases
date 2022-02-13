@@ -71,7 +71,10 @@
     <Compile Include="Converters\NumericConverter.cs" />
     <Compile Include="Converters\PressConverters.cs" />
     <Compile Include="Converters\ThemeConverters.cs" />
+    <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Press.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Presses\DBPresses.cs" />
     <Compile Include="Presses\ViewModel.cs" />
     <Compile Include="RelayCommand.cs" />

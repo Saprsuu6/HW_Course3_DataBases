@@ -11,7 +11,7 @@ namespace BooksInLibrary.Models
     internal class LibraryDataContext : DataContext
     {
         public LibraryDataContext()
-            : base(ConfigurationManager.ConnectionStrings["Library"].ConnectionString)
+            : base(ConfigurationManager.ConnectionStrings["MyLibrary"].ConnectionString)
         { }
 
 
