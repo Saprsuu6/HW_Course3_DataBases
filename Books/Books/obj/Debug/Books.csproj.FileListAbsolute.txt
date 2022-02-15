@@ -1,0 +1,16 @@
+C:\Users\coffe\source\repos\Books\Books\bin\Debug\Books.exe.config
+C:\Users\coffe\source\repos\Books\Books\bin\Debug\Books.exe
+C:\Users\coffe\source\repos\Books\Books\bin\Debug\Books.pdb
+C:\Users\coffe\source\repos\Books\Books\bin\Debug\EntityFramework.dll
+C:\Users\coffe\source\repos\Books\Books\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\coffe\source\repos\Books\Books\bin\Debug\EntityFramework.xml
+C:\Users\coffe\source\repos\Books\Books\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.csproj.AssemblyReference.cache
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.csproj.SuggestedBindingRedirects.cache
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.Properties.Resources.resources
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.csproj.GenerateResource.cache
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.csproj.CoreCompileInputs.cache
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.csproj.CopyComplete
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.exe
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.pdb
+C:\Users\coffe\source\repos\Books\Books\obj\Debug\Books.Form1.resources
