@@ -20,6 +20,11 @@ namespace Books
             // AddToStart.FillTables(context);
         }
 
+        private DialogResult Question(string message)
+        {
+            return MessageBox.Show(message, "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
         #region GetLists
         private List<Author> GetAuthors()
         {
@@ -284,142 +289,157 @@ namespace Books
         #region Removeings
         private async void button2_Click(object sender, EventArgs e)
         {
-            Author author = Authors.SelectedItem as Author;
-
-            if (author != null)
+            if (Question("Do you want delete this author?") == DialogResult.Yes)
             {
-                MessageBox.Show("Removeing...");
+                Author author = Authors.SelectedItem as Author;
 
-                try
+                if (author != null)
                 {
-                    await Task.Run(() =>
+                    MessageBox.Show("Removeing...");
+
+                    try
                     {
-                        context.Authors.Remove(author);
-                        context.SaveChangesAsync();
-                    });
+                        await Task.Run(() =>
+                        {
+                            context.Authors.Remove(author);
+                            context.SaveChangesAsync();
+                        });
 
-                    Authors.Items.Remove(author);
-                    MessageBox.Show("Author was succesfully removed.");
+                        Authors.Items.Remove(author);
+                        MessageBox.Show("Author was succesfully removed.");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Author was not succesfully removed.");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Author was not succesfully removed.");
-                }
+                else
+                    MessageBox.Show("Select item.");
             }
-            else
-                MessageBox.Show("Select item.");
         }
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            Press press = Presses.SelectedItem as Press;
-
-            if (press != null)
+            if (Question("Do you want delete this press?") == DialogResult.Yes)
             {
-                MessageBox.Show("Removeing...");
+                Press press = Presses.SelectedItem as Press;
 
-                try
+                if (press != null)
                 {
-                    await Task.Run(() =>
+                    MessageBox.Show("Removeing...");
+
+                    try
                     {
-                        context.Presses.Remove(press);
-                        context.SaveChangesAsync();
-                    });
+                        await Task.Run(() =>
+                        {
+                            context.Presses.Remove(press);
+                            context.SaveChangesAsync();
+                        });
 
-                    Presses.Items.Remove(press);
-                    MessageBox.Show("Press was succesfully removed.");
+                        Presses.Items.Remove(press);
+                        MessageBox.Show("Press was succesfully removed.");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Press was not succesfully removed.");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Press was not succesfully removed.");
-                }
+                else
+                    MessageBox.Show("Select item.");
             }
-            else
-                MessageBox.Show("Select item.");
         }
 
         private async void button5_Click(object sender, EventArgs e)
         {
-            Category category = Categories.SelectedItem as Category;
-
-            if (category != null)
+            if (Question("Do you want delete this category?") == DialogResult.Yes)
             {
-                MessageBox.Show("Removeing...");
+                Category category = Categories.SelectedItem as Category;
 
-                try
+                if (category != null)
                 {
-                    await Task.Run(() =>
+                    MessageBox.Show("Removeing...");
+
+                    try
                     {
-                        context.Categories.Remove(category);
-                        context.SaveChangesAsync();
-                    });
+                        await Task.Run(() =>
+                        {
+                            context.Categories.Remove(category);
+                            context.SaveChangesAsync();
+                        });
 
-                    Categories.Items.Remove(category);
-                    MessageBox.Show("Category was succesfully removed.");
+                        Categories.Items.Remove(category);
+                        MessageBox.Show("Category was succesfully removed.");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Category was not succesfully removed.");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Category was not succesfully removed.");
-                }
+                else
+                    MessageBox.Show("Select item.");
             }
-            else
-                MessageBox.Show("Select item.");
         }
 
         private async void button7_Click(object sender, EventArgs e)
         {
-            Theme theme = Themes.SelectedItem as Theme;
-
-            if (theme != null)
+            if (Question("Do you want delete this theme?") == DialogResult.Yes)
             {
-                MessageBox.Show("Removeing...");
+                Theme theme = Themes.SelectedItem as Theme;
 
-                try
+                if (theme != null)
                 {
-                    await Task.Run(() =>
+                    MessageBox.Show("Removeing...");
+
+                    try
                     {
-                        context.Themes.Remove(theme);
-                        context.SaveChangesAsync();
-                    });
+                        await Task.Run(() =>
+                        {
+                            context.Themes.Remove(theme);
+                            context.SaveChangesAsync();
+                        });
 
-                    Themes.Items.Remove(theme);
-                    MessageBox.Show("Theme was succesfully removed.");
+                        Themes.Items.Remove(theme);
+                        MessageBox.Show("Theme was succesfully removed.");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Theme was not succesfully removed.");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Theme was not succesfully removed.");
-                }
+                else
+                    MessageBox.Show("Select item.");
             }
-            else
-                MessageBox.Show("Select item.");
         }
 
         private async void button10_Click(object sender, EventArgs e)
         {
-            Book book = Books.SelectedItem as Book;
-
-            if (book != null)
+            if (Question("Do you want delete this book?") == DialogResult.Yes)
             {
-                MessageBox.Show("Removeing...");
+                Book book = Books.SelectedItem as Book;
 
-                try
+                if (book != null)
                 {
-                    await Task.Run(() =>
+                    MessageBox.Show("Removeing...");
+
+                    try
                     {
-                        context.Books.Remove(book);
-                        context.SaveChangesAsync();
-                    });
+                        await Task.Run(() =>
+                        {
+                            context.Books.Remove(book);
+                            context.SaveChangesAsync();
+                        });
 
-                    Books.Items.Remove(book);
-                    MessageBox.Show("Books was succesfully removed.");
+                        Books.Items.Remove(book);
+                        MessageBox.Show("Books was succesfully removed.");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Books was not succesfully removed.");
+                    }
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Books was not succesfully removed.");
-                }
+                else
+                    MessageBox.Show("Select item.");
             }
-            else
-                MessageBox.Show("Select item.");
         }
         #endregion
 
