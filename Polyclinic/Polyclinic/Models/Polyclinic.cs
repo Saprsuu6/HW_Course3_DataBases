@@ -13,7 +13,9 @@ namespace Polyclinic.Models
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
 
-        static Polyclinic()
+        public Polyclinic() : base(ConfigurationManager.ConnectionStrings["Polyclinic"].ConnectionString) { }
+
+        static Polyclinic() 
         {
             Database.SetInitializer(new PoloclinicInitializer());
         }
