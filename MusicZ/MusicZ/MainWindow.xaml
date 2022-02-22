@@ -1,0 +1,107 @@
+﻿<Window x:Class="MusicZ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicZ"
+        xmlns:stuff="clr-namespace:MusicZ.ViewModels"
+        xmlns:converters="clr-namespace:MusicZ.Converters"
+        mc:Ignorable="d"
+        Title="MusicZ" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <stuff:ViewModelStuff x:Key="StuffView"/>
+
+        <converters:NameConverter x:Key="StuffNameConverter"/>
+        <converters:SurenameConverter x:Key="StuffSurenameConverter"/>
+        <converters:PhoneConverter x:Key="StuffPhoneConverter"/>
+        <converters:ProcentConverter x:Key="StuffProcentConverter"/>
+        <converters:NumberConverter x:Key="NumberConverter"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+
+    <TabControl>
+        <TabItem Header="Stuff">
+            <Grid DataContext="{DynamicResource StuffView}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Name:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Text="Surename:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Phone:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="3" Text="Password:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="4" Text="Procent from sale:"/>
+
+                    <TextBox Grid.Column="1" Grid.Row="0"
+                             Text="{Binding Stuff.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1"
+                             Text="{Binding Stuff.Surename, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2"
+                             Text="{Binding Stuff.Phone, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3"
+                             Text="{Binding Stuff.Password, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="4"
+                             Text="{Binding Stuff.ProcentFromsale, UpdateSourceTrigger=PropertyChanged, 
+                        Converter={StaticResource NumberConverter}}"/>
+                </Grid>
+
+                <UniformGrid Grid.Column="1" Rows="6" Margin="5">
+                    <Button Content="Add stuff" Grid.Row="0"
+                            Command="{Binding Add}"/>
+                    <Button Content="Remove stuff" Grid.Row="1"
+                            Command="{Binding Remove}"/>
+                    <Button Content="Update stuff" Grid.Row="2"
+                            Command="{Binding Upadate}"/>
+                    <Button Content="Find stuffs" Grid.Row="3"
+                            Command="{Binding Find}"/>
+                    <Button Content="All Staffs" Grid.Row="3"
+                            Command="{Binding AllStuffs}"/>
+                    <Button Content="Clear fiels" Grid.Row="3"
+                            Command="{Binding ClearFields}"/>
+                </UniformGrid>
+
+                <ListBox Grid.Column="2" Margin="5" ItemsSource="{Binding Stuffs}"
+                         SelectedItem="{Binding Stuff}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Name, Converter={StaticResource StuffNameConverter}}"/>
+                                <TextBlock Text="{Binding Surename, Converter={StaticResource StuffSurenameConverter}}"/>
+                                <TextBlock Text="{Binding Phone, Converter={StaticResource StuffPhoneConverter}}"/>
+                                <TextBlock Text="{Binding ProcentFromsale, Converter={StaticResource StuffProcentConverter}}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
