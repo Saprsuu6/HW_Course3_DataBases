@@ -84,4 +84,36 @@ namespace MusicZ.Converters
             }
         }
     }
+
+    public class IsRegularClientConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if ((bool)value)
+                return "Is regular client";
+
+            return "Is not regular client";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return DependencyProperty.UnsetValue;
+        }
+    }
+
+    public class BirthdayConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value != null)
+                return "Birthday: " + ((DateTime)value).ToShortDateString();
+
+            return "Birthday is undefined";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return DependencyProperty.UnsetValue;
+        }
+    }
 }

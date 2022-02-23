@@ -37,7 +37,7 @@ namespace MusicZ.WorkWithBases
                     where concreteClient.Name == client.Name
                     || concreteClient.Surename == client.Surename
                     || concreteClient.Phone == client.Phone
-                    || concreteClient.Birthday == client.Birthday
+                    || concreteClient.IsRegularClient == client.IsRegularClient
                     select concreteClient).ToList();
         }
     }

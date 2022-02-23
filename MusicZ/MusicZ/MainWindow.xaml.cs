@@ -21,9 +21,22 @@ namespace MusicZ
     /// </summary>
     public partial class MainWindow : Window
     {
+        //private Context context;
+
         public MainWindow()
         {
             InitializeComponent();
+            //context = new Context();
+
+            //context.Clients.Add(new Client()
+            //{
+            //    Name = "Andry",
+            //    Surename = "Saproigin",
+            //    Phone = "0639450317",
+            //    Password = "Lich25524",
+            //    IsRegularClient = false
+            //});
+            //context.SaveChanges();
         }
     }
 }

@@ -71,7 +71,9 @@
       <DependentUpon>RegistrationAutorisation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Regular\Reg.cs" />
+    <Compile Include="ViewModels\ViewModelClient.cs" />
     <Compile Include="ViewModels\ViewModelStuff.cs" />
+    <Compile Include="WorkWithBases\WorkWithChecks.cs" />
     <Compile Include="WorkWithBases\WorkWithClients.cs" />
     <Compile Include="WorkWithBases\WorkWithStuffs.cs" />
     <Page Include="MainWindow.xaml">
