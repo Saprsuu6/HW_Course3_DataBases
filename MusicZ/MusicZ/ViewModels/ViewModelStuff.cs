@@ -48,40 +48,6 @@ namespace MusicZ.ViewModels
             }
         }
 
-        public RelayCommand Add
-        {
-            get
-            {
-                return command = new RelayCommand(async obj =>
-                {
-                    Stuff stuff = new Stuff()
-                    {
-                        Name = this.stuff.Name,
-                        Surename = this.stuff.Surename,
-                        Phone = this.stuff.Phone,
-                        Password = this.stuff.Password,
-                        ProcentFromsale = this.stuff.ProcentFromsale,
-                    };
-
-                    MessageBox.Show("Loading...", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    try
-                    {
-                        await Task.Run(() => WorkWithStuffs.AddStuff(context, stuff));
-                        MessageBox.Show("Stuff was succesfully added.", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-                        Stuffs.Insert(0, stuff);
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Stuff was not succesfully added.", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                }, obj => CanOnClick());
-            }
-        }
-
         public RelayCommand Remove
         {
             get
@@ -93,9 +59,13 @@ namespace MusicZ.ViewModels
 
                     try
                     {
-                        await Task.Run(() => WorkWithStuffs.RemoveStuff(context, stuff));
+                        await Task.Run(() =>
+                        {
+                            WorkWithStuffs.RemoveStuff(context, stuff);
+                        });
                         MessageBox.Show("Stuff was removed removed.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
+                        Stuffs.Remove(stuff);
                     }
                     catch (Exception)
                     {

@@ -7,10 +7,12 @@
         xmlns:model="clr-namespace:MusicZ.ViewModels"
         xmlns:converters="clr-namespace:MusicZ.Converters"
         mc:Ignorable="d"
-        Title="MusicZ" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="MusicZ" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Window.Resources>
         <model:ViewModelStuff x:Key="StuffView"/>
         <model:ViewModelClient x:Key="ClientView"/>
+        <model:ViewModelCheck x:Key="CheckView"/>
+        <model:ViewModelAlbom x:Key="AlbomView"/>
 
         <converters:NameConverter x:Key="NameConverter"/>
         <converters:SurenameConverter x:Key="SurenameConverter"/>
@@ -19,6 +21,20 @@
         <converters:NumberConverter x:Key="NumberConverter"/>
         <converters:IsRegularClientConverter x:Key="IsRegularClientConverter"/>
         <converters:BirthdayConverter x:Key="BirthdayConverter"/>
+        <converters:DateOfCheckConverter x:Key="DateOfCheckConverter"/>
+        <converters:IdStuffConverter x:Key="IdStuffConverter"/>
+        <converters:IdClientConverter x:Key="IdClientConverter"/>
+        <converters:IdAlbomConverter x:Key="IdAlbomConverter"/>
+        <converters:BandNameConverter x:Key="BandNameConverter"/>
+        <converters:PublisherConverter x:Key="PublisherConverter"/>
+        <converters:AmountTracksConverter x:Key="AmountTracksConverter"/>
+        <converters:GenreConverter x:Key="GenreConverter"/>
+        <converters:YearOfPublishConverter x:Key="YearOfPublishConverter"/>
+        <converters:YearOfAddingConverter x:Key="YearOfAddingConverter"/>
+        <converters:CostPriceConverter x:Key="CostPriceConverter"/>
+        <converters:PriceForSaleConverter x:Key="PriceForSaleConverter"/>
+        <converters:DiscountConverter x:Key="DiscountConverter"/>
+        <converters:ReservedConverter x:Key="ReservedConverter"/>
 
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -40,6 +56,10 @@
 
         <Style TargetType="DatePicker">
             <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
     </Window.Resources>
@@ -82,9 +102,7 @@
                         Converter={StaticResource NumberConverter}}"/>
                 </Grid>
 
-                <UniformGrid Grid.Column="1" Rows="6" Margin="5">
-                    <Button Content="Add stuff" Grid.Row="0"
-                            Command="{Binding Add}"/>
+                <UniformGrid Grid.Column="1" Rows="5" Margin="5">
                     <Button Content="Remove stuff" Grid.Row="1"
                             Command="{Binding Remove}"/>
                     <Button Content="Update stuff" Grid.Row="2"
@@ -172,6 +190,180 @@
                                 <TextBlock Text="{Binding Phone, Converter={StaticResource PhoneConverter}}"/>
                                 <TextBlock Text="{Binding Birthday, Converter={StaticResource BirthdayConverter}}"/>
                                 <TextBlock Text="{Binding IsRegularClient, Converter={StaticResource IsRegularClientConverter}}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Alboms">
+            <Grid DataContext="{StaticResource AlbomView}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Name:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Text="Band name:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Publsher:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="3" Text="Amount tracks:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="4" Text="Genre:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="5" Text="Year of publish:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="6" Text="Year of adding:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="7" Text="Cost price:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="8" Text="Price for sale:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="9" Text="Discount:"/>
+
+                    <TextBox Grid.Column="1" Grid.Row="0" 
+                             Text="{Binding Albom.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1"
+                             Text="{Binding Albom.BandName, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2"
+                             Text="{Binding Albom.Publisher, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3"
+                             Text="{Binding Albom.AmountTracks, UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource NumberConverter}}"/>
+                    <TextBox Grid.Column="1" Grid.Row="4"
+                             Text="{Binding Albom.Genre, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="5"
+                             Text="{Binding Albom.YearOfPublish, UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource NumberConverter}}"/>
+                    <TextBox Grid.Column="1" Grid.Row="6"
+                             Text="{Binding Albom.YearOfAdding, UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource NumberConverter}}"/>
+                    <TextBox Grid.Column="1" Grid.Row="7"
+                             Text="{Binding Albom.CostPrice, UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource NumberConverter}}"/>
+                    <TextBox Grid.Column="1" Grid.Row="8"
+                             Text="{Binding Albom.PriceForSale, UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource NumberConverter}}"/>
+                    <TextBox Grid.Column="1" Grid.Row="9"
+                             Text="{Binding Albom.Discount, UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource NumberConverter}}"/>
+                </Grid>
+
+                <UniformGrid Grid.Column="1" Rows="6" Margin="5">
+                    <Button Content="Add albom" Grid.Row="1"
+                            Command="{Binding Add}"/>
+                    <Button Content="Remove albom" Grid.Row="3"
+                            Command="{Binding Remove}"/>
+                    <Button Content="Update albom" Grid.Row="1"
+                            Command="{Binding Upadate}"/>
+                    <Button Content="Find albom" Grid.Row="3"
+                            Command="{Binding Find}"/>
+                    <Button Content="All albom" Grid.Row="3"
+                            Command="{Binding AllAlboms}"/>
+                    <Button Content="Clear albom" Grid.Row="3"
+                            Command="{Binding ClearFields}"/>
+                </UniformGrid>
+
+                <ListBox Grid.Column="2" Margin="5" ItemsSource="{Binding Alboms}"
+                         SelectedItem="{Binding Albom}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
+                                <TextBlock Text="{Binding BandName, Converter={StaticResource BandNameConverter}}"/>
+                                <TextBlock Text="{Binding Publisher, Converter={StaticResource PublisherConverter}}"/>
+                                <TextBlock Text="{Binding AmountTracks, Converter={StaticResource AmountTracksConverter}}"/>
+                                <TextBlock Text="{Binding Genre, Converter={StaticResource GenreConverter}}"/>
+                                <TextBlock Text="{Binding YearOfPublish, Converter={StaticResource YearOfPublishConverter}}"/>
+                                <TextBlock Text="{Binding YearOfAdding, Converter={StaticResource YearOfAddingConverter}}"/>
+                                <TextBlock Text="{Binding CostPrice, Converter={StaticResource CostPriceConverter}}"/>
+                                <TextBlock Text="{Binding PriceForSale, Converter={StaticResource PriceForSaleConverter}}"/>
+                                <TextBlock Text="{Binding Discount, Converter={StaticResource DiscountConverter}}"/>
+                                <TextBlock Text="{Binding ReservedByClient, Converter={StaticResource ReservedConverter}}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Checks">
+            <Grid DataContext="{StaticResource CheckView}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Stuff:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Text="Client:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Albom:"/>
+
+                    <ComboBox Grid.Column="1" Grid.Row="0" 
+                              ItemsSource="{Binding Stuffs}"
+                              SelectedItem="{Binding Stuff,
+                        UpdateSourceTrigger=PropertyChanged}"
+                              DisplayMemberPath="Name"/>
+                    <ComboBox Grid.Column="1" Grid.Row="1"
+                              ItemsSource="{Binding Clients}"
+                              SelectedItem="{Binding Client,
+                        UpdateSourceTrigger=PropertyChanged}"
+                               DisplayMemberPath="Name"/>
+                    <ComboBox Grid.Column="1" Grid.Row="2"
+                              ItemsSource="{Binding Alboms}" 
+                              SelectedItem="{Binding Albom,
+                        UpdateSourceTrigger=PropertyChanged}"
+                               DisplayMemberPath="Name"/>
+                </Grid>
+
+                <UniformGrid Grid.Column="1" Rows="5" Margin="5">
+                    <Button Content="Add check" Grid.Row="1"
+                            Command="{Binding Add}"/>
+                    <Button Content="Remove check" Grid.Row="3"
+                            Command="{Binding Remove}"/>
+                    <Button Content="Find check" Grid.Row="3"
+                            Command="{Binding Find}"/>
+                    <Button Content="All checks" Grid.Row="3"
+                            Command="{Binding AllChecks}"/>
+                    <Button Content="Clear client" Grid.Row="3"
+                            Command="{Binding ClearFields}"/>
+                </UniformGrid>
+
+                <ListBox Grid.Column="2" Margin="5" ItemsSource="{Binding Checks}"
+                         SelectedItem="{Binding Check}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Id_Stuff, Converter={StaticResource IdStuffConverter}}"/>
+                                <TextBlock Text="{Binding Id_Client, Converter={StaticResource IdClientConverter}}"/>
+                                <TextBlock Text="{Binding Id_Albom, Converter={StaticResource IdAlbomConverter}}"/>
+                                <TextBlock Text="{Binding Date, Converter={StaticResource BirthdayConverter}}"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

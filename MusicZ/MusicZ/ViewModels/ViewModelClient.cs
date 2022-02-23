@@ -3,12 +3,9 @@ using MusicZ.Models;
 using MusicZ.Regular;
 using MusicZ.WorkWithBases;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -62,9 +59,13 @@ namespace MusicZ.ViewModels
 
                     try
                     {
-                        await Task.Run(() => WorkWithClients.RemoveClient(context, client));
+                        await Task.Run(() =>
+                        {
+                            WorkWithClients.RemoveClient(context, client);
+                        });
                         MessageBox.Show("Client was succesfully removed.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
+                        Clients.Remove(client);
                     }
                     catch (Exception)
                     {

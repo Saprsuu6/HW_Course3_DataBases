@@ -18,7 +18,7 @@ namespace MusicZ.Regular
         {
             ForNameSurename = @"^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$";
             ForNumberPhone = @"^((380|\+380)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$";
-            ForPassword = @"^(?=.*[0-9].*)(?=.*[a-z].*)(?=.*[A-Z].*)[0-9a-zA-Z]{8,}$";
+            ForPassword = @"^(?=.*[0-9].*)(?=.*[a-z].*)[0-9a-zA-Z]{8,}$";
             ForNumber = @"^\d+$";
         }
 

@@ -29,10 +29,10 @@ namespace MusicZ.Models
         public string Genre { get; set; }
 
         [Required]
-        public DateTime YearOfPublish { get; set; }
+        public int YearOfPublish { get; set; }
 
         [Required]
-        public DateTime YearOfAdding { get; set; }
+        public int YearOfAdding { get; set; }
 
         [Required]
         public int CostPrice { get; set; }

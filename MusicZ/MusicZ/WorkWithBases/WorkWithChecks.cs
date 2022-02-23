@@ -34,9 +34,9 @@ namespace MusicZ.WorkWithBases
         static public List<Check> GetChecks(Context context, Check check)
         {
             return (from concreteCheck in context.Checkes
-                    where concreteCheck.Id_Stuff == check.Id_Stuff
-                    || concreteCheck.Id_Client == check.Id_Client
-                    || concreteCheck.Id_Albom == check.Id_Albom
+                    where concreteCheck.Id_Stuff.Id == check.Id_Stuff.Id
+                    || concreteCheck.Id_Client.Id == check.Id_Client.Id
+                    || concreteCheck.Id_Albom.Id == check.Id_Albom.Id
                     select concreteCheck).ToList();
         }
     }
