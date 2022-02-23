@@ -25,7 +25,7 @@ namespace MusicZ.ViewModels
 
             context = new Context();
             stuff = new Stuff();
-            stuffs = new ObservableCollection<Stuff>(WorkWithStuff.GetAllStuff(context));
+            stuffs = new ObservableCollection<Stuff>(WorkWithStuffs.GetAllStuff(context));
         }
 
         public Stuff Stuff
@@ -68,7 +68,7 @@ namespace MusicZ.ViewModels
 
                     try
                     {
-                        await Task.Run(() => WorkWithStuff.AddStuff(context, stuff));
+                        await Task.Run(() => WorkWithStuffs.AddStuff(context, stuff));
                         MessageBox.Show("Stuff was succesfully added.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         Stuffs.Insert(0, stuff);
@@ -78,11 +78,7 @@ namespace MusicZ.ViewModels
                         MessageBox.Show("Stuff was not succesfully added.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                     }
-                }, obj => stuff != null && Reg.CheckNameSurename(stuff.Name)
-                && Reg.CheckNameSurename(stuff.Surename)
-                && Reg.CheckNumberPhone(stuff.Phone)
-                && Reg.CheckPassword(stuff.Password)
-                && Reg.CheckNumber(stuff.ProcentFromsale.ToString()));
+                }, obj => CanOnClick());
             }
         }
 
@@ -97,7 +93,7 @@ namespace MusicZ.ViewModels
 
                     try
                     {
-                        await Task.Run(() => WorkWithStuff.RemoveStuff(context, stuff));
+                        await Task.Run(() => WorkWithStuffs.RemoveStuff(context, stuff));
                         MessageBox.Show("Stuff was removed removed.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                     }
@@ -106,11 +102,7 @@ namespace MusicZ.ViewModels
                         MessageBox.Show("Stuff was not removed removed.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                     }
-                }, obj => stuff != null && Reg.CheckNameSurename(stuff.Name)
-                && Reg.CheckNameSurename(stuff.Surename)
-                && Reg.CheckNumberPhone(stuff.Phone)
-                && Reg.CheckPassword(stuff.Password)
-                && Reg.CheckNumber(stuff.ProcentFromsale.ToString()));
+                }, obj => CanOnClick());
             }
         }
 
@@ -125,7 +117,7 @@ namespace MusicZ.ViewModels
 
                     try
                     {
-                        await Task.Run(() => WorkWithStuff.UpdateStuff(context, stuff));
+                        await Task.Run(() => WorkWithStuffs.UpdateStuff(context, stuff));
                         MessageBox.Show("Stuff was updated updated.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                     }
@@ -134,11 +126,7 @@ namespace MusicZ.ViewModels
                         MessageBox.Show("Stuff was not succesfully updated.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                     }
-                }, obj => stuff != null && Reg.CheckNameSurename(stuff.Name)
-                && Reg.CheckNameSurename(stuff.Surename)
-                && Reg.CheckNumberPhone(stuff.Phone)
-                && Reg.CheckPassword(stuff.Password)
-                && Reg.CheckNumber(stuff.ProcentFromsale.ToString()));
+                }, obj => CanOnClick());
             }
         }
 
@@ -154,18 +142,14 @@ namespace MusicZ.ViewModels
                     try
                     {
                         Stuffs = new ObservableCollection<Stuff>
-                        (await Task.Run(() => WorkWithStuff.GetStuffs(context, stuff)));
+                        (await Task.Run(() => WorkWithStuffs.GetStuffs(context, stuff)));
                     }
                     catch (Exception)
                     {
                         MessageBox.Show("Stuff was not finded.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                     }
-                }, obj => stuff != null && Reg.CheckNameSurename(stuff.Name)
-                && Reg.CheckNameSurename(stuff.Surename)
-                && Reg.CheckNumberPhone(stuff.Phone)
-                && Reg.CheckPassword(stuff.Password)
-                && Reg.CheckNumber(stuff.ProcentFromsale.ToString()));
+                }, obj => CanOnClick());
             }
         }
 
@@ -175,7 +159,7 @@ namespace MusicZ.ViewModels
             {
                 return command = new RelayCommand(obj =>
                 {
-                    stuffs = new ObservableCollection<Stuff>(WorkWithStuff.GetAllStuff(context));
+                    stuffs = new ObservableCollection<Stuff>(WorkWithStuffs.GetAllStuff(context));
                     MessageBox.Show("Stuffs was succesfully loaded.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                 });
@@ -191,6 +175,18 @@ namespace MusicZ.ViewModels
                     Stuff = new Stuff();
                 });
             }
+        }
+
+        private bool CanOnClick()
+        {
+            if (stuff != null && Reg.CheckNameSurename(stuff.Name)
+                && Reg.CheckNameSurename(stuff.Surename)
+                && Reg.CheckNumberPhone(stuff.Phone)
+                && Reg.CheckPassword(stuff.Password)
+                && Reg.CheckNumber(stuff.ProcentFromsale.ToString()))
+                return true;
+
+            return false;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -66,14 +66,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Command\RelayCommand.cs" />
-    <Compile Include="Converters\NumberConverter.cs" />
-    <Compile Include="Converters\StuffConverters.cs" />
+    <Compile Include="Converters\Converters.cs" />
     <Compile Include="RegistrationAutorisation.xaml.cs">
       <DependentUpon>RegistrationAutorisation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Regular\Reg.cs" />
     <Compile Include="ViewModels\ViewModelStuff.cs" />
-    <Compile Include="WorkWithBases\WorkWithStuff.cs" />
+    <Compile Include="WorkWithBases\WorkWithClients.cs" />
+    <Compile Include="WorkWithBases\WorkWithStuffs.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

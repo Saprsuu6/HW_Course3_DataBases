@@ -7,7 +7,7 @@ using MusicZ.Models;
 
 namespace MusicZ.WorkWithBases
 {
-    internal class WorkWithStuff
+    internal class WorkWithStuffs
     {
         static public void AddStuff(Context context, Stuff stuff)
         {
@@ -37,7 +37,6 @@ namespace MusicZ.WorkWithBases
                     where concreteStuff.Name == stuff.Name 
                     || concreteStuff.Surename == stuff.Surename
                     || concreteStuff.Phone == stuff.Phone
-                    || concreteStuff.Password == stuff.Password
                     || concreteStuff.ProcentFromsale == stuff.ProcentFromsale
                     select concreteStuff).ToList();
         }

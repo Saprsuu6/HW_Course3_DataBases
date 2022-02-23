@@ -60,4 +60,28 @@ namespace MusicZ.Converters
             return DependencyProperty.UnsetValue;
         }
     }
+
+    public class NumberConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return value;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if ((string)value == "")
+                return 0;
+
+            try
+            {
+                value = int.Parse((string)value);
+                return value;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+    }
 }
