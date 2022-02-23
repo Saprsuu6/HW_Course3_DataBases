@@ -18,14 +18,17 @@ namespace MusicZ.ViewModels
         private ObservableCollection<Stuff> stuffs;
         private RelayCommand command;
 
+        public static event EventHandler<EventArgs> updateChecks = null;
+        public static event EventHandler<EventArgs> updateStuffs = null;
+
         public ViewModelStuff()
         {
             if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
                 return;
 
             context = new Context();
-            stuff = new Stuff();
-            stuffs = new ObservableCollection<Stuff>(WorkWithStuffs.GetAllStuff(context));
+            Stuff = new Stuff();
+            Stuffs = new ObservableCollection<Stuff>(WorkWithStuffs.GetAllStuff(context));
         }
 
         public Stuff Stuff
@@ -59,13 +62,12 @@ namespace MusicZ.ViewModels
 
                     try
                     {
-                        await Task.Run(() =>
-                        {
-                            WorkWithStuffs.RemoveStuff(context, stuff);
-                        });
+                        await Task.Run(() => WorkWithStuffs.RemoveStuff(context, stuff));
                         MessageBox.Show("Stuff was removed removed.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         Stuffs.Remove(stuff);
+                        updateStuffs.Invoke(this, EventArgs.Empty);
+                        updateChecks.Invoke(this, EventArgs.Empty);
                     }
                     catch (Exception)
                     {

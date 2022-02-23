@@ -4,9 +4,64 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicZ"
+        xmlns:model="clr-namespace:MusicZ.ViewModels"
         mc:Ignorable="d"
-        Title="RegistrationAutorisation" Height="200" Width="300" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
-    <Grid>
-        
+        Title="RegistrationAutorisation" Height="200" Width="300" WindowStartupLocation="CenterScreen" Closed="Window_Closed" WindowStyle="None">
+    <Window.Resources>
+        <model:ViewModelAR x:Key="ARView"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid DataContext="{DynamicResource ARView}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="145*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Surename:"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Phone:"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Password:"/>
+
+            <TextBox Grid.Row="0" Grid.Column="1"
+                     Text="{Binding Stuff.Name, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Text="{Binding Stuff.Surename, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Grid.Row="2" Grid.Column="1"
+                     Text="{Binding Stuff.Phone, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Grid.Row="3" Grid.Column="1"
+                     Text="{Binding Stuff.Password, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+
+        <UniformGrid Grid.Row="1" Columns="3">
+            <Button Content="Log in" Command="{Binding LogIn}" Click="Button_Click"/>
+            <Button Content="Sing up" Command="{Binding SingUp}" Click="Button_Click_2"/>
+            <Button Content="Cancel" Click="Button_Click_1"/>
+        </UniformGrid>
     </Grid>
 </Window>

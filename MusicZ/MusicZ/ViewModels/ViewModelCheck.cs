@@ -1,5 +1,6 @@
 ﻿using MusicZ.Command;
 using MusicZ.Models;
+using MusicZ.Regular;
 using MusicZ.WorkWithBases;
 using System;
 using System.Collections.ObjectModel;
@@ -29,19 +30,49 @@ namespace MusicZ.ViewModels
                 return;
 
             context = new Context();
-            client = new Client();
-            stuff = new Stuff();
-            check = new Check();
-            albom = new Albom();
+            Client = new Client();
+            Stuff = new Stuff();
+            Check = new Check();
+            Albom = new Albom();
 
-            clients = new ObservableCollection<Client>(WorkWithClients.GetAllClients(context));
-            client = clients[0];
-            stuffs = new ObservableCollection<Stuff>(WorkWithStuffs.GetAllStuff(context));
-            stuff = stuffs[0];
-            checks = new ObservableCollection<Check>(WorkWithChecks.GetAllChecks(context));
-            check = checks[0];
-            alboms = new ObservableCollection<Albom>(WorkWithAlboms.GetAllAlboms(context));
-            albom = alboms[0];
+            Clients = new ObservableCollection<Client>(WorkWithClients.GetAllClients(context));
+            if (clients.Count > 0) Client = clients[0];
+            Stuffs = new ObservableCollection<Stuff>(WorkWithStuffs.GetAllStuff(context));
+            if (stuffs.Count > 0) Stuff = stuffs[0];
+            Checks = new ObservableCollection<Check>(WorkWithChecks.GetAllChecks(context));
+            Alboms = new ObservableCollection<Albom>(WorkWithAlboms.GetAllAlboms(context));
+            if (alboms.Count > 0) Albom = alboms[0];
+
+            ViewModelAlbom.updateAlboms += new EventHandler<EventArgs>(UpdateAlboms);
+            ViewModelClient.updateClients += new EventHandler<EventArgs>(UpdateClients);
+            ViewModelStuff.updateStuffs += new EventHandler<EventArgs>(UpdateStuffs);
+
+            ViewModelAlbom.updateChecks += new EventHandler<EventArgs>(UpdateChecks);
+            ViewModelClient.updateChecks += new EventHandler<EventArgs>(UpdateChecks);
+            ViewModelStuff.updateChecks += new EventHandler<EventArgs>(UpdateChecks);
+        }
+
+        private void UpdateChecks(object sender, EventArgs e)
+        {
+            Checks = new ObservableCollection<Check>(WorkWithChecks.GetAllChecks(context));
+        }
+
+        private void UpdateStuffs(object sender, EventArgs e)
+        {
+            Stuffs = new ObservableCollection<Stuff>(WorkWithStuffs.GetAllStuff(context));
+            if (stuffs.Count > 0) stuff = stuffs[0];
+        }
+
+        private void UpdateClients(object sender, EventArgs e)
+        {
+            Clients = new ObservableCollection<Client>(WorkWithClients.GetAllClients(context));
+            if (clients.Count > 0) client = clients[0];
+        }
+
+        private void UpdateAlboms(object sender, EventArgs e)
+        {
+            Alboms = new ObservableCollection<Albom>(WorkWithAlboms.GetAllAlboms(context));
+            if (alboms.Count > 0) albom = alboms[0];
         }
 
         public Albom Albom
@@ -242,7 +273,47 @@ namespace MusicZ.ViewModels
 
         private bool CanOnclick()
         {
-            if (stuff != null && client != null && albom != null)
+            if (IsEmptyStuff() && IsEmptyClient() && IsEmptyAlbom())
+                return true;
+
+            return false;
+        }
+
+        private bool IsEmptyStuff()
+        {
+            if (stuff != null && Reg.CheckNameSurename(stuff.Name)
+                && Reg.CheckNameSurename(stuff.Surename)
+                && Reg.CheckNumberPhone(stuff.Phone)
+                && Reg.CheckPassword(stuff.Password)
+                && Reg.CheckNumber(stuff.ProcentFromsale.ToString()))
+                return true;
+
+            return false;
+        }
+
+        private bool IsEmptyClient()
+        {
+            if (client != null && Reg.CheckNameSurename(client.Name)
+                && Reg.CheckNameSurename(client.Surename)
+                && Reg.CheckNumberPhone(client.Phone)
+                && Reg.CheckPassword(client.Password))
+                return true;
+
+            return false;
+        }
+
+        private bool IsEmptyAlbom()
+        {
+            if (albom != null && Reg.CheckNameSurename(albom.Name)
+                && Reg.CheckNameSurename(albom.BandName)
+                && Reg.CheckNameSurename(albom.Publisher)
+                && Reg.CheckNumber(albom.AmountTracks.ToString())
+                && Reg.CheckNameSurename(albom.Genre)
+                && Reg.CheckNumber(albom.YearOfPublish.ToString())
+                && Reg.CheckNumber(albom.YearOfAdding.ToString())
+                && Reg.CheckNumber(albom.CostPrice.ToString())
+                && Reg.CheckNumber(albom.PriceForSale.ToString())
+                && Reg.CheckNumber(albom.Discount.ToString()))
                 return true;
 
             return false;

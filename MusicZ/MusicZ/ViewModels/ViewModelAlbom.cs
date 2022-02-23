@@ -18,14 +18,17 @@ namespace MusicZ.ViewModels
         private ObservableCollection<Albom> alboms;
         private RelayCommand command;
 
+        public static event EventHandler<EventArgs> updateChecks = null;
+        public static event EventHandler<EventArgs> updateAlboms = null;
+
         public ViewModelAlbom()
         {
             if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
                 return;
 
             context = new Context();
-            albom = new Albom();
-            alboms = new ObservableCollection<Albom>(WorkWithAlboms.GetAllAlboms(context));
+            Albom = new Albom();
+            Alboms = new ObservableCollection<Albom>(WorkWithAlboms.GetAllAlboms(context));
         }
 
         public Albom Albom
@@ -77,6 +80,8 @@ namespace MusicZ.ViewModels
                         MessageBox.Show("Albom was succesfully added.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         Alboms.Insert(0, albom);
+                        updateAlboms.Invoke(this, EventArgs.Empty);
+                        updateChecks.Invoke(this, EventArgs.Empty);
                     }
                     catch (Exception)
                     {
@@ -98,13 +103,11 @@ namespace MusicZ.ViewModels
 
                     try
                     {
-                        await Task.Run(() =>
-                        {
-                            WorkWithAlboms.RemoveAlbom(context, albom);
-                        });
+                        await Task.Run(() => WorkWithAlboms.RemoveAlbom(context, albom));
                         MessageBox.Show("Albom was removed removed.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         Alboms.Remove(albom);
+                        updateAlboms.Invoke(this, EventArgs.Empty);
                     }
                     catch (Exception)
                     {

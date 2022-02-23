@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="Regular\Reg.cs" />
     <Compile Include="ViewModels\ViewModelAlbom.cs" />
+    <Compile Include="ViewModels\ViewModelAR.cs" />
     <Compile Include="ViewModels\ViewModelCheck.cs" />
     <Compile Include="ViewModels\ViewModelClient.cs" />
     <Compile Include="ViewModels\ViewModelStuff.cs" />

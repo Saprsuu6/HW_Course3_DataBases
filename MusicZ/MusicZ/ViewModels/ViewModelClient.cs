@@ -18,14 +18,17 @@ namespace MusicZ.ViewModels
         private ObservableCollection<Client> clients;
         private RelayCommand command;
 
+        public static event EventHandler<EventArgs> updateChecks = null;
+        public static event EventHandler<EventArgs> updateClients = null;
+
         public ViewModelClient()
         {
             if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
                 return;
 
             context = new Context();
-            client = new Client();
-            clients = new ObservableCollection<Client>(WorkWithClients.GetAllClients(context));
+            Client = new Client();
+            Clients = new ObservableCollection<Client>(WorkWithClients.GetAllClients(context));
         }
 
         public Client Client
@@ -59,13 +62,12 @@ namespace MusicZ.ViewModels
 
                     try
                     {
-                        await Task.Run(() =>
-                        {
-                            WorkWithClients.RemoveClient(context, client);
-                        });
+                        await Task.Run(() => WorkWithClients.RemoveClient(context, client));
                         MessageBox.Show("Client was succesfully removed.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         Clients.Remove(client);
+                        updateClients.Invoke(this, EventArgs.Empty);
+                        updateChecks.Invoke(this, EventArgs.Empty);
                     }
                     catch (Exception)
                     {

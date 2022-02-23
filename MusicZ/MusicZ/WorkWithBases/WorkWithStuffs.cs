@@ -1,9 +1,6 @@
-﻿using System;
+﻿using MusicZ.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MusicZ.Models;
 
 namespace MusicZ.WorkWithBases
 {
@@ -26,6 +23,18 @@ namespace MusicZ.WorkWithBases
             context.SaveChanges();
         }
 
+        static public Stuff GetStuff(Context context, Stuff stuff)
+        {
+            var var = (from concreteStuff in context.Stuff
+                       where stuff.Phone == concreteStuff.Phone
+                       && stuff.Password == concreteStuff.Password
+                       && stuff.Name == concreteStuff.Name
+                       && stuff.Surename == concreteStuff.Surename
+                       select concreteStuff).ToList();
+
+            return var[0];
+        }
+
         static public List<Stuff> GetAllStuff(Context context)
         {
             return context.Stuff.ToList();
@@ -34,7 +43,7 @@ namespace MusicZ.WorkWithBases
         static public List<Stuff> GetStuffs(Context context, Stuff stuff)
         {
             return (from concreteStuff in context.Stuff
-                    where concreteStuff.Name == stuff.Name 
+                    where concreteStuff.Name == stuff.Name
                     || concreteStuff.Surename == stuff.Surename
                     || concreteStuff.Phone == stuff.Phone
                     || concreteStuff.ProcentFromsale == stuff.ProcentFromsale

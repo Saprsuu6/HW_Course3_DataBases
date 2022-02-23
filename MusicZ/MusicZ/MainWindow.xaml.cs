@@ -28,7 +28,7 @@ namespace MusicZ
         {
             InitializeComponent();
             //context = new Context();
-            //
+            
             //context.Clients.Add(new Client()
             //{
             //    Name = "Andry",
@@ -42,11 +42,11 @@ namespace MusicZ
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Effect = new BlurEffect();
-            
-            var registrationAutorisation = new RegistrationAutorisation();
-            registrationAutorisation.Owner = this;
-            registrationAutorisation.ShowDialog();
+            //Effect = new BlurEffect();
+            //
+            //var registrationAutorisation = new RegistrationAutorisation();
+            //registrationAutorisation.Owner = this;
+            //registrationAutorisation.ShowDialog();
         }
     }
 }
