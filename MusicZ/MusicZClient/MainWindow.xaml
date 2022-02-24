@@ -1,0 +1,100 @@
+﻿<Window x:Class="MusicZClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicZClient"
+        xmlns:view="clr-namespace:MusicZClient.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Window.Resources>
+        <view:ViewModelClient x:Key="ClientView"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="CheckBox">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="DatePicker">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+    <TabControl>
+        <TabItem Header="Personal Info">
+            <Grid DataContext="{StaticResource ClientView}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="112*"/>
+                        <ColumnDefinition Width="153*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Name:" Grid.Row="0" Grid.Column="0" Height="16" Width="34"/>
+                    <TextBlock Text="Surename:" Grid.Row="1" Grid.Column="0" Height="16" Width="56"/>
+                    <TextBlock Text="Phone:" Grid.Row="2" Grid.Column="0" Height="16" Width="36"/>
+                    <TextBlock Text="Password:" Grid.Row="3" Grid.Column="0" Height="16" Width="52"/>
+                    <TextBlock Text="Birthday:" Grid.Row="4" Grid.Column="0" Height="16" Width="46"/>
+
+                    <TextBox Grid.Row="0" Grid.Column="1"
+                             Text="{Binding Client.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Row="1" Grid.Column="1"
+                             Text="{Binding Client.Surename, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Row="2" Grid.Column="1"
+                             Text="{Binding Client.Phone, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Row="3" Grid.Column="1"
+                             Text="{Binding Client.Password, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DatePicker Grid.Row="4" Grid.Column="1"
+                                Text="{Binding Birthday, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Content="Remove account" Grid.Row="5" Grid.ColumnSpan="2"/>
+                    <Button Content="Update info" Grid.Row="6" Grid.ColumnSpan="2"/>
+                </Grid>
+
+                <ListBox Margin="5" Grid.Column="1">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <!--<TextBlock Text="{Binding Id_Stuff, Converter={StaticResource IdStuffConverter}}"/>
+                                <TextBlock Text="{Binding Id_Client, Converter={StaticResource IdClientConverter}}"/>
+                                <TextBlock Text="{Binding Id_Albom, Converter={StaticResource IdAlbomConverter}}"/>
+                                <TextBlock Text="{Binding Date, Converter={StaticResource BirthdayConverter}}"/>-->
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

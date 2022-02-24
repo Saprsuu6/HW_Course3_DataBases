@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "baa14ea4-1295-4dba-87a9-7a60ddd46a16": {
+      "ProjectGuid": "baa14ea4-1295-4dba-87a9-7a60ddd46a16",
+      "DisplayName": "MusicZClient",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

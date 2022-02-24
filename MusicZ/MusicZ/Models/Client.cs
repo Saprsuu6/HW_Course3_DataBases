@@ -19,7 +19,8 @@ namespace MusicZ.Models
         [Required, MaxLength(50)]
         public string Password { get; set; }
 
-        public DateTime? Birthday { get; set; }
+        [Required]
+        public string Birthday { get; set; }
 
         [Required]
         public bool IsRegularClient { get; set; }
