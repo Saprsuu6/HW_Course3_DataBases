@@ -22,6 +22,19 @@ namespace MusicZClient
         public RegistrationAutorisation()
         {
             InitializeComponent();
+            ViewModels.ViewModelAR.enter += new EventHandler<EventArgs>(Enter);
+            ViewModels.ViewModelClient.close += new EventHandler<EventArgs>(CoseWindow);
+        }
+
+        private void CoseWindow(object sender, EventArgs e)
+        {
+            Owner.Close();
+        }
+
+        private void Enter(object sender, EventArgs e)
+        {
+            Owner.Effect = null; 
+            Hide();
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -32,18 +45,6 @@ namespace MusicZClient
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Owner.Close();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Owner.Effect = null;
-            Hide();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Owner.Effect = null;
-            Hide();
         }
     }
 }

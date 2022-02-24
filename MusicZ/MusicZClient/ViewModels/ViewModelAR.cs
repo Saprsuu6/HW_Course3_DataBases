@@ -18,6 +18,7 @@ namespace MusicZClient.ViewModels
         private RelayCommand command;
 
         public static event EventHandler<EventArgs> updateInfo = null;
+        public static event EventHandler<EventArgs> enter = null;
 
         public ViewModelAR()
         {
@@ -72,6 +73,7 @@ namespace MusicZClient.ViewModels
                         MessageBox.Show("You was succesfully registred.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         updateInfo.Invoke(client, EventArgs.Empty);
+                        enter.Invoke(client, EventArgs.Empty);
                     }
                     catch (Exception)
                     {
@@ -98,6 +100,7 @@ namespace MusicZClient.ViewModels
                         MessageBox.Show("You was succesfully loged in.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         updateInfo.Invoke(concreteClient, EventArgs.Empty);
+                        enter.Invoke(client, EventArgs.Empty);
                     }
                     catch (Exception)
                     {

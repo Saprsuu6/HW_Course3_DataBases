@@ -16,6 +16,8 @@ namespace MusicZ.ViewModels
         private Stuff stuff;
         private RelayCommand command;
 
+        public static event EventHandler<EventArgs> enter = null; 
+
         public ViewModelAR()
         {
             if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
@@ -57,6 +59,7 @@ namespace MusicZ.ViewModels
                         await Task.Run(() => WorkWithStuffs.AddStuff(context, stuff));
                         MessageBox.Show("You was succesfully registred.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
+                        enter?.Invoke(this, EventArgs.Empty);
                     }
                     catch (Exception)
                     {
@@ -82,6 +85,7 @@ namespace MusicZ.ViewModels
                         (() => WorkWithStuffs.GetStuff(context, this.stuff));
                         MessageBox.Show("You was succesfully loged in.", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
+                        enter?.Invoke(this, EventArgs.Empty);
                     }
                     catch (Exception)
                     {

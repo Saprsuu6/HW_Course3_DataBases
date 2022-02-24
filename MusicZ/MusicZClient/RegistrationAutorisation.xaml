@@ -70,8 +70,8 @@
         </Grid>
 
         <UniformGrid Grid.Row="1" Columns="3">
-            <Button Content="Log in" Command="{Binding LogIn}" Click="Button_Click"/>
-            <Button Content="Sing up" Command="{Binding SingUp}" Click="Button_Click_2"/>
+            <Button Content="Log in" Command="{Binding LogIn}"/>
+            <Button Content="Sing up" Command="{Binding SingUp}"/>
             <Button Content="Cancel" Click="Button_Click_1"/>
         </UniformGrid>
     </Grid>

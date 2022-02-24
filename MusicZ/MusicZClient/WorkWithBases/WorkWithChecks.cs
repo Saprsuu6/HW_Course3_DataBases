@@ -1,9 +1,6 @@
 ﻿using MusicZClient.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicZClient.WorkWithBases
 {
@@ -29,6 +26,15 @@ namespace MusicZClient.WorkWithBases
         static public List<Check> GetAllChecks(Context context)
         {
             return context.Checkes.ToList();
+        }
+
+        static public List<Check> GetClientChecks(Context context, Client client)
+        {
+            List<Check> cheks = (from concreteCheck in context.Checkes
+                                 where concreteCheck.Id_Client.Id == client.Id
+                                 select concreteCheck).ToList();
+
+            return cheks;
         }
 
         static public List<Check> GetChecks(Context context, Check check)

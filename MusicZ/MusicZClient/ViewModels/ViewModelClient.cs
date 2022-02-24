@@ -16,7 +16,11 @@ namespace MusicZClient.ViewModels
         private DateTime birthday;
         private Context context;
         private Client client;
+        private Check check;
+        private ObservableCollection<Check> checks;
         private RelayCommand command;
+
+        public static event EventHandler<EventArgs> close = null;
 
         public DateTime Birthday
         {
@@ -33,13 +37,36 @@ namespace MusicZClient.ViewModels
             if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
                 return;
 
+            Check = new Check();
             context = new Context();
+
             ViewModelAR.updateInfo += new EventHandler<EventArgs>(UpdateClient);
+        }
+
+        public Check Check
+        {
+            get { return check; }
+            set
+            {
+                check = value;
+                OnPropertyChanged(nameof(Check));
+            }
+        }
+
+        public ObservableCollection<Check> Checks
+        {
+            get { return checks; }
+            set
+            {
+                checks = value;
+                OnPropertyChanged(nameof(Checks));
+            }
         }
 
         private void UpdateClient(object sender, EventArgs e)
         {
             Client = sender as Client;
+            Checks = new ObservableCollection<Check>(WorkWithChecks.GetClientChecks(context, client));
 
             try
             {
@@ -65,19 +92,23 @@ namespace MusicZClient.ViewModels
             {
                 return command = new RelayCommand(async obj =>
                 {
-                    MessageBox.Show("Loading...", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
+                    var result = MessageBox.Show("Do u really want to remove ur account?", "Message",
+                            MessageBoxButton.YesNo, MessageBoxImage.Information);
 
-                    try
+                    if (result == MessageBoxResult.Yes)
                     {
-                        await Task.Run(() => WorkWithClients.RemoveClient(context, client));
-                        MessageBox.Show("Client was succesfully removed.", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Client was not succesfully removed.", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
+                        try
+                        {
+                            await Task.Run(() => WorkWithClients.RemoveClient(context, client));
+                            MessageBox.Show("Client was succesfully removed.", "Message",
+                                MessageBoxButton.OK, MessageBoxImage.Information);
+                            close.Invoke(this, EventArgs.Empty);
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Client was not succesfully removed.", "Message",
+                                MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
                     }
                 }, obj => CanOnClick());
             }

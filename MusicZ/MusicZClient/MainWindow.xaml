@@ -5,10 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicZClient"
         xmlns:view="clr-namespace:MusicZClient.ViewModels"
+        xmlns:converters="clr-namespace:MusicZClient.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Window.Resources>
         <view:ViewModelClient x:Key="ClientView"/>
+
+        <converters:DateOfCheckConverter x:Key="DateOfCheckConverter"/>
+        <converters:IdStuffConverter x:Key="IdStuffConverter"/>
+        <converters:IdClientConverter x:Key="IdClientConverter"/>
+        <converters:IdAlbomConverter x:Key="IdAlbomConverter"/>
+        <converters:BirthdayConverter x:Key="BirthdayConverter"/>
 
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -78,18 +85,21 @@
                              Text="{Binding Client.Password, UpdateSourceTrigger=PropertyChanged}"/>
                     <DatePicker Grid.Row="4" Grid.Column="1"
                                 Text="{Binding Birthday, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Content="Remove account" Grid.Row="5" Grid.ColumnSpan="2"/>
-                    <Button Content="Update info" Grid.Row="6" Grid.ColumnSpan="2"/>
+                    <Button Content="Remove account" Grid.Row="5" Grid.ColumnSpan="2"
+                            Command="{Binding Remove}"/>
+                    <Button Content="Update info" Grid.Row="6" Grid.ColumnSpan="2"
+                            Command="{Binding Upadate}"/>
                 </Grid>
 
-                <ListBox Margin="5" Grid.Column="1">
+                <ListBox Margin="5" Grid.Column="1" ItemsSource="{Binding Checks}"
+                         SelectedItem="{Binding Check}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <!--<TextBlock Text="{Binding Id_Stuff, Converter={StaticResource IdStuffConverter}}"/>
+                                <TextBlock Text="{Binding Id_Stuff, Converter={StaticResource IdStuffConverter}}"/>
                                 <TextBlock Text="{Binding Id_Client, Converter={StaticResource IdClientConverter}}"/>
                                 <TextBlock Text="{Binding Id_Albom, Converter={StaticResource IdAlbomConverter}}"/>
-                                <TextBlock Text="{Binding Date, Converter={StaticResource BirthdayConverter}}"/>-->
+                                <TextBlock Text="{Binding Date, Converter={StaticResource BirthdayConverter}}"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

@@ -23,6 +23,13 @@ namespace MusicZ
         public RegistrationAutorisation()
         {
             InitializeComponent();
+            ViewModels.ViewModelAR.enter += new EventHandler<EventArgs>(Enter);
+        }
+
+        private void Enter(object sender, EventArgs e)
+        {
+            Owner.Effect = null;
+            Hide();
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -33,18 +40,6 @@ namespace MusicZ
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Owner.Close();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Owner.Effect = null;
-            Hide();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Owner.Effect = null;
-            Hide();
         }
     }
 }

@@ -1,9 +1,6 @@
-﻿using System;
+﻿using MusicZClient.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MusicZClient.Models;
 
 namespace MusicZClient.WorkWithBases
 {
@@ -17,12 +14,31 @@ namespace MusicZClient.WorkWithBases
 
         static public void RemoveClient(Context context, Client client)
         {
-            context.Clients.Remove(client);
+            var clients = from concreteClient in context.Clients
+                          where client.Id == concreteClient.Id
+                          select concreteClient;
+
+            Client newClient = clients.ToList()[0];
+
+            context.Clients.Remove(newClient);
             context.SaveChanges();
         }
 
         static public void UpdateClient(Context context, Client client)
         {
+            var clients = from concreteClient in context.Clients
+                          where client.Name != concreteClient.Name
+                          || concreteClient.Surename == client.Surename
+                          || concreteClient.Phone == client.Phone
+                          select concreteClient;
+
+            Client newClient = clients.ToList()[0];
+            newClient.Name = client.Name;
+            newClient.Surename = client.Surename;
+            newClient.Phone = client.Phone;
+            newClient.Password = client.Password;
+            newClient.Birthday = client.Birthday;
+
             context.SaveChanges();
         }
 
