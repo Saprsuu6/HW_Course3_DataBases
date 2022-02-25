@@ -137,7 +137,7 @@ namespace MusicZClient.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value == null)
-                return value;
+                return "Stiff: undefined";
 
             return "Stuff: " + (value as Stuff).Name + " " +
                 (value as Stuff).Surename;
@@ -156,7 +156,7 @@ namespace MusicZClient.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value == null)
-                return value;
+                return "Client: undefined";
 
             return "Client: " + (value as Client).Name + " " +
                 (value as Client).Surename;
@@ -170,12 +170,10 @@ namespace MusicZClient.Converters
 
     public class IdAlbomConverter : IValueConverter
     {
-        private Context context = new Context();
-
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value == null)
-                return value;
+                return "Albom: undefined";
 
             return "Albom: " + (value as Albom).Name + " (" +
                 (value as Albom).BandName + ")";
@@ -269,7 +267,7 @@ namespace MusicZClient.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return "Cost price: " + value.ToString();
+            return "Cost price: " + value.ToString() + "$";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -282,7 +280,7 @@ namespace MusicZClient.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return "Price for sale: " + value.ToString();
+            return "Price for sale: " + value.ToString() + "$";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -295,7 +293,7 @@ namespace MusicZClient.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return "Discount: " + value.ToString();
+            return "Discount: " + value.ToString() + "%";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -313,6 +311,19 @@ namespace MusicZClient.Converters
                     " " + (value as Albom).ReservedByClient.Surename;
 
             return "Is not reserved";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return DependencyProperty.UnsetValue;
+        }
+    }
+
+    public class QuantityAlbomsConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return "Quantity: " + ((int)value).ToString();
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

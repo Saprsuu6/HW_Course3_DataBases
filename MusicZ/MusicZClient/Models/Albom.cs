@@ -25,6 +25,9 @@ namespace MusicZClient.Models
         [Required]
         public int AmountTracks { get; set; }
 
+        [Required]
+        public int Quantity { get; set; }
+
         [Required, MaxLength(50)]
         public string Genre { get; set; }
 

@@ -40,7 +40,8 @@ namespace MusicZClient.ViewModels
             Check = new Check();
             context = new Context();
 
-            ViewModelAR.updateInfo += new EventHandler<EventArgs>(UpdateClient);
+            ViewModelAR.updateInfo += new EventHandler<EventArgs>(UpdateCheks);
+            ViewModelShop.updateChecks += new EventHandler<EventArgs> (UpdateCheks);
         }
 
         public Check Check
@@ -63,7 +64,7 @@ namespace MusicZClient.ViewModels
             }
         }
 
-        private void UpdateClient(object sender, EventArgs e)
+        private void UpdateCheks(object sender, EventArgs e)
         {
             Client = sender as Client;
             Checks = new ObservableCollection<Check>(WorkWithChecks.GetClientChecks(context, client));

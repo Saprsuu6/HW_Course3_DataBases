@@ -63,6 +63,7 @@ namespace MusicZ.ViewModels
                         BandName = this.albom.BandName,
                         Publisher = this.albom.Publisher,
                         AmountTracks = this.albom.AmountTracks,
+                        Quantity = this.albom.Quantity,
                         Genre = this.albom.Genre,
                         YearOfPublish = this.albom.YearOfPublish,
                         YearOfAdding = this.albom.YearOfAdding,

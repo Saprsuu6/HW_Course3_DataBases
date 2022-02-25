@@ -77,9 +77,11 @@
     <Compile Include="Regular\Reg.cs" />
     <Compile Include="ViewModels\ViewModelAR.cs" />
     <Compile Include="ViewModels\ViewModelClient.cs" />
+    <Compile Include="ViewModels\ViewModelShop.cs" />
     <Compile Include="WorkWithBases\WorkWithAlboms.cs" />
     <Compile Include="WorkWithBases\WorkWithChecks.cs" />
     <Compile Include="WorkWithBases\WorkWithClients.cs" />
+    <Compile Include="WorkWithBases\WorkWithStuffs.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

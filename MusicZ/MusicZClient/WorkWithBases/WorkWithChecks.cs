@@ -30,11 +30,19 @@ namespace MusicZClient.WorkWithBases
 
         static public List<Check> GetClientChecks(Context context, Client client)
         {
-            List<Check> cheks = (from concreteCheck in context.Checkes
-                                 where concreteCheck.Id_Client.Id == client.Id
-                                 select concreteCheck).ToList();
+            List<Client> clients  = WorkWithClients.GetAllClients(context);
+            List<Stuff> stuffs = WorkWithStuffs.GetAllStuff(context);
+            List<Albom> alboms = WorkWithAlboms.GetAllAlboms(context);
+            List<Check> checks = WorkWithChecks.GetAllChecks(context);
+            List<Check> newChecks = new List<Check>();
 
-            return cheks;
+            foreach (var item in checks)
+            {
+                if (item.Id_Client.Id == client.Id)
+                    newChecks.Add(item);
+            }
+
+            return newChecks;
         }
 
         static public List<Check> GetChecks(Context context, Check check)

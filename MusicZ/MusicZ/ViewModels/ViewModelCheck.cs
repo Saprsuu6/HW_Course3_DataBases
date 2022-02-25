@@ -39,9 +39,9 @@ namespace MusicZ.ViewModels
             if (clients.Count > 0) Client = clients[0];
             Stuffs = new ObservableCollection<Stuff>(WorkWithStuffs.GetAllStuff(context));
             if (stuffs.Count > 0) Stuff = stuffs[0];
-            Checks = new ObservableCollection<Check>(WorkWithChecks.GetAllChecks(context));
             Alboms = new ObservableCollection<Albom>(WorkWithAlboms.GetAllAlboms(context));
             if (alboms.Count > 0) Albom = alboms[0];
+            Checks = new ObservableCollection<Check>(WorkWithChecks.GetAllChecks(context));
 
             ViewModelAlbom.updateAlboms += new EventHandler<EventArgs>(UpdateAlboms);
             ViewModelClient.updateClients += new EventHandler<EventArgs>(UpdateClients);

@@ -18,7 +18,6 @@ namespace MusicZClient.Models
         [Required]
         public virtual Client Id_Client { get; set; }
 
-        [Required]
         public virtual Stuff Id_Stuff { get; set; }
 
         [Required]

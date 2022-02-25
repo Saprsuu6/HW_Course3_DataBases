@@ -35,6 +35,7 @@
         <converters:PriceForSaleConverter x:Key="PriceForSaleConverter"/>
         <converters:DiscountConverter x:Key="DiscountConverter"/>
         <converters:ReservedConverter x:Key="ReservedConverter"/>
+        <converters:QuantityAlbomsConverter x:Key="QuantityAlbomsConverter"/>
 
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -217,6 +218,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
@@ -228,12 +230,13 @@
                     <TextBlock Grid.Column="0" Grid.Row="1" Text="Band name:"/>
                     <TextBlock Grid.Column="0" Grid.Row="2" Text="Publsher:"/>
                     <TextBlock Grid.Column="0" Grid.Row="3" Text="Amount tracks:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="4" Text="Genre:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="5" Text="Year of publish:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="6" Text="Year of adding:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="7" Text="Cost price:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="8" Text="Price for sale:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="9" Text="Discount:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="4" Text="Quantity:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="5" Text="Genre:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="6" Text="Year of publish:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="7" Text="Year of adding:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="8" Text="Cost price:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="9" Text="Price for sale:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="10" Text="Discount:"/>
 
                     <TextBox Grid.Column="1" Grid.Row="0" 
                              Text="{Binding Albom.Name, UpdateSourceTrigger=PropertyChanged}"/>
@@ -245,20 +248,23 @@
                              Text="{Binding Albom.AmountTracks, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
                     <TextBox Grid.Column="1" Grid.Row="4"
-                             Text="{Binding Albom.Genre, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding Albom.Quantity, UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource NumberConverter}}"/>
                     <TextBox Grid.Column="1" Grid.Row="5"
+                             Text="{Binding Albom.Genre, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="6"
                              Text="{Binding Albom.YearOfPublish, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
-                    <TextBox Grid.Column="1" Grid.Row="6"
+                    <TextBox Grid.Column="1" Grid.Row="7"
                              Text="{Binding Albom.YearOfAdding, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
-                    <TextBox Grid.Column="1" Grid.Row="7"
+                    <TextBox Grid.Column="1" Grid.Row="8"
                              Text="{Binding Albom.CostPrice, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
-                    <TextBox Grid.Column="1" Grid.Row="8"
+                    <TextBox Grid.Column="1" Grid.Row="9"
                              Text="{Binding Albom.PriceForSale, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
-                    <TextBox Grid.Column="1" Grid.Row="9"
+                    <TextBox Grid.Column="1" Grid.Row="10"
                              Text="{Binding Albom.Discount, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
                 </Grid>
@@ -287,6 +293,7 @@
                                 <TextBlock Text="{Binding BandName, Converter={StaticResource BandNameConverter}}"/>
                                 <TextBlock Text="{Binding Publisher, Converter={StaticResource PublisherConverter}}"/>
                                 <TextBlock Text="{Binding AmountTracks, Converter={StaticResource AmountTracksConverter}}"/>
+                                <TextBlock Text="{Binding Quantity, Converter={StaticResource QuantityAlbomsConverter}}"/>
                                 <TextBlock Text="{Binding Genre, Converter={StaticResource GenreConverter}}"/>
                                 <TextBlock Text="{Binding YearOfPublish, Converter={StaticResource YearOfPublishConverter}}"/>
                                 <TextBlock Text="{Binding YearOfAdding, Converter={StaticResource YearOfAddingConverter}}"/>
