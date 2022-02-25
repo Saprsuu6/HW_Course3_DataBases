@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicZClient.WorkWithBases
 {
@@ -29,6 +27,53 @@ namespace MusicZClient.WorkWithBases
         static public List<Albom> GetAllAlboms(Context context)
         {
             return context.Alboms.ToList();
+        }
+
+        static public List<Albom> GetNews(Context context)
+        {
+            return (from concreteAlbom in context.Alboms
+                    where concreteAlbom.YearOfAdding.Month >= DateTime.Now.Month - 1
+                    select concreteAlbom).ToList();
+        }
+
+        static public List<Albom> PopularAlboms(Context context)
+        {
+            List<Albom> alboms = GetAllAlboms(context);
+            List<Check> checks = WorkWithChecks.GetAllChecks(context);
+            SortedList<int, string> pair = new SortedList<int, string>();
+
+            foreach (Albom item in alboms)
+            {
+                int counter = 0;
+
+                foreach (Check check in checks)
+                {
+                    if (item.Id == check.Id_Albom.Id)
+                        counter += check.AmountAlboms;
+                }
+
+                pair.Add(counter, item.Name);
+            }
+
+            int max = 0;
+            for (int i = 0; i < pair.Count - 1; i++)
+                max = Math.Max(pair.Keys[i], pair.Keys[i + 1]);
+
+            string name = pair[max];
+
+            return (from concreteAlbom in context.Alboms
+                   where concreteAlbom.Name == name
+                    select concreteAlbom).ToList();
+        }
+
+
+        static public List<Albom> FindAlboms(Context context, Albom albom)
+        {
+            return (from concreteAlbom in context.Alboms
+                    where concreteAlbom.Name == albom.Name
+                    || concreteAlbom.BandName == albom.BandName
+                    || concreteAlbom.Genre == albom.Genre
+                    select concreteAlbom).ToList();
         }
 
         static public List<Albom> GetAlboms(Context context, Albom albom)

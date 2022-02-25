@@ -35,7 +35,7 @@ namespace MusicZ.Models
         public int YearOfPublish { get; set; }
 
         [Required]
-        public int YearOfAdding { get; set; }
+        public DateTime YearOfAdding { get; set; }
 
         [Required]
         public int CostPrice { get; set; }

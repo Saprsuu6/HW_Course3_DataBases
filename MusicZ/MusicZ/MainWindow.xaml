@@ -218,7 +218,6 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
-                        <RowDefinition/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
@@ -233,10 +232,9 @@
                     <TextBlock Grid.Column="0" Grid.Row="4" Text="Quantity:"/>
                     <TextBlock Grid.Column="0" Grid.Row="5" Text="Genre:"/>
                     <TextBlock Grid.Column="0" Grid.Row="6" Text="Year of publish:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="7" Text="Year of adding:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="8" Text="Cost price:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="9" Text="Price for sale:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="10" Text="Discount:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="7" Text="Cost price:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="8" Text="Price for sale:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="9" Text="Discount:"/>
 
                     <TextBox Grid.Column="1" Grid.Row="0" 
                              Text="{Binding Albom.Name, UpdateSourceTrigger=PropertyChanged}"/>
@@ -256,15 +254,12 @@
                              Text="{Binding Albom.YearOfPublish, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
                     <TextBox Grid.Column="1" Grid.Row="7"
-                             Text="{Binding Albom.YearOfAdding, UpdateSourceTrigger=PropertyChanged,
-                        Converter={StaticResource NumberConverter}}"/>
-                    <TextBox Grid.Column="1" Grid.Row="8"
                              Text="{Binding Albom.CostPrice, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
-                    <TextBox Grid.Column="1" Grid.Row="9"
+                    <TextBox Grid.Column="1" Grid.Row="8"
                              Text="{Binding Albom.PriceForSale, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
-                    <TextBox Grid.Column="1" Grid.Row="10"
+                    <TextBox Grid.Column="1" Grid.Row="9"
                              Text="{Binding Albom.Discount, UpdateSourceTrigger=PropertyChanged,
                         Converter={StaticResource NumberConverter}}"/>
                 </Grid>

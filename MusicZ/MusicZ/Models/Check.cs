@@ -22,5 +22,8 @@ namespace MusicZ.Models
 
         [Required]
         public DateTime Date { get; set; }
+
+        [Required]
+        public virtual int AmountAlboms { get; set; }
     }
 }

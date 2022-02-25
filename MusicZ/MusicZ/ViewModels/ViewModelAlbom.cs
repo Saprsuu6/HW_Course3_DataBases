@@ -66,7 +66,7 @@ namespace MusicZ.ViewModels
                         Quantity = this.albom.Quantity,
                         Genre = this.albom.Genre,
                         YearOfPublish = this.albom.YearOfPublish,
-                        YearOfAdding = this.albom.YearOfAdding,
+                        YearOfAdding = DateTime.Now,
                         CostPrice = this.albom.CostPrice,
                         PriceForSale = this.albom.PriceForSale,
                         Discount = this.albom.Discount

@@ -7,7 +7,7 @@
         xmlns:view="clr-namespace:MusicZClient.ViewModels"
         xmlns:converters="clr-namespace:MusicZClient.Converters"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="600" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="600" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Window.Resources>
         <view:ViewModelClient x:Key="ClientView"/>
         <view:ViewModelShop x:Key="ShopView"/>
@@ -31,6 +31,11 @@
         <converters:QuantityAlbomsConverter x:Key="QuantityAlbomsConverter"/>
 
         <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="RadioButton">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
@@ -168,25 +173,64 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Text="Amount for buing:" Height="16" Width="98"/>
-                            <TextBlock Grid.Row="1" Text="Amount for reserving:" Height="16" Width="114"/>
+                            <TextBlock Grid.Row="1" Text="Reserving:"/>
 
                             <TextBox Grid.Column="1" Height="18" 
                                      Text="{Binding Amount, 
                                 UpdateSourceTrigger=PropertyChanged,
                                 Converter={StaticResource NumberConverter}}"/>
-                            <TextBox Grid.Row="1" Grid.Column="1" Height="18"
-                                      Text="{Binding Amount, 
-                                UpdateSourceTrigger=PropertyChanged,
-                                Converter={StaticResource NumberConverter}}"/>
 
                             <Button Content="Buy" Grid.Row="0" Grid.Column="3"
                                     Command="{Binding Buy}"/>
-                            <Button Content="Reserve" Grid.Row="1" Grid.Column="3"/>
+                            <Button Content="Reserve" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1"
+                                    Command="{Binding Reserve}"/>
                         </Grid>
                     </GroupBox>
 
-                    <GroupBox Grid.Row="1" Margin="5,5,5,5" Header="Findings">
+                    <GroupBox Grid.Row="1" Margin="5" Header="Findings">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
 
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Name:" Grid.Row="0" Grid.Column="0"/>
+                            <TextBlock Text="Band name:" Grid.Row="1" Grid.Column="0"/>
+                            <TextBlock Text="Genre:" Grid.Row="2" Grid.Column="0"/>
+
+                            <TextBox Grid.Row="0" Grid.Column="1" 
+                                     Text="{Binding Albom.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Grid.Row="1" Grid.Column="1"
+                                     Text="{Binding Albom.BandName, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox Grid.Row="2" Grid.Column="1"
+                                     Text="{Binding Albom.Genre, UpdateSourceTrigger=PropertyChanged}"/>
+
+                            <Button Grid.Row="0" Grid.Column="2" Content="Find"
+                                    Command="{Binding Find}"/>
+                            <Button Grid.Row="1" Grid.Column="2" Content="All alboms"
+                                    Command="{Binding AllAlboms}"/>
+                            <Button Grid.Row="2" Grid.Column="2" Content="News"
+                                    Command="{Binding News}"/>
+                            <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Content="Popular"
+                                    Command="{Binding Popular}"/>
+                            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="Popular authors"/>
+                            <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Content="Popular genre"/>
+
+                            <RadioButton Grid.Row="6" Grid.Column="0" Content="By year"/>
+                            <RadioButton Grid.Row="7" Grid.Column="1" Content="By month"/>
+                            <RadioButton Grid.Row="8" Grid.Column="2" Content="By week"/>
+                        </Grid>
                     </GroupBox>
                 </Grid>
             </Grid>
