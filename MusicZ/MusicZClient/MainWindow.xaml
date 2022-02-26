@@ -195,8 +195,6 @@
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
                             </Grid.RowDefinitions>
 
                             <Grid.ColumnDefinitions>
@@ -224,12 +222,13 @@
                                     Command="{Binding News}"/>
                             <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Content="Popular"
                                     Command="{Binding Popular}"/>
-                            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="Popular authors"/>
-                            <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Content="Popular genre"/>
 
-                            <RadioButton Grid.Row="6" Grid.Column="0" Content="By year"/>
-                            <RadioButton Grid.Row="7" Grid.Column="1" Content="By month"/>
-                            <RadioButton Grid.Row="8" Grid.Column="2" Content="By week"/>
+                            <RadioButton Grid.Row="4" Grid.Column="0" Content="By year"
+                                         IsChecked="{Binding PopularByYear, UpdateSourceTrigger=PropertyChanged}"/>
+                            <RadioButton Grid.Row="5" Grid.Column="1" Content="By month"
+                                          IsChecked="{Binding PopularByMonth, UpdateSourceTrigger=PropertyChanged}"/>
+                            <RadioButton Grid.Row="6" Grid.Column="2" Content="By week"
+                                          IsChecked="{Binding PopularByWeek, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
                     </GroupBox>
                 </Grid>

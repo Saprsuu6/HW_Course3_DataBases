@@ -14,6 +14,9 @@ namespace MusicZClient.ViewModels
 {
     internal class ViewModelShop : INotifyPropertyChanged
     {
+        private bool popularByYear;
+        private bool popularByMonth;
+        private bool popularByWeek;
         private int amount;
         private Context context;
         private Client client;
@@ -31,6 +34,7 @@ namespace MusicZClient.ViewModels
             ViewModelAR.updateInfo += new EventHandler<EventArgs>(UpdateClient);
 
             context = new Context();
+            popularByYear = true;
         }
 
         private void UpdateClient(object sender, EventArgs e)
@@ -65,6 +69,24 @@ namespace MusicZClient.ViewModels
             }
 
             return new ObservableCollection<Albom>(alboms);
+        }
+
+        public bool PopularByYear
+        {
+            get { return popularByYear; }
+            set { popularByYear = value; }
+        }
+
+        public bool PopularByMonth
+        {
+            get { return popularByMonth; }
+            set { popularByMonth = value; }
+        }
+
+        public bool PopularByWeek
+        {
+            get { return popularByWeek; }
+            set { popularByWeek = value; }
         }
 
         public int Amount
@@ -261,10 +283,16 @@ namespace MusicZClient.ViewModels
                 {
                     try
                     {
+                        string condition = "";
+
+                        if (popularByYear) condition = "year";
+                        else if (popularByYear) condition = "month";
+                        else if (popularByYear) condition = "week";
+
                         MessageBox.Show("Loading...", "Message",
                                 MessageBoxButton.OK, MessageBoxImage.Information);
 
-                        List<Albom> alboms = await Task.Run(() => WorkWithAlboms.PopularAlboms(context));
+                        List<Albom> alboms = await Task.Run(() => WorkWithAlboms.PopularAlboms(context, condition));
 
                         if (alboms.Count == 0)
                             throw new Exception("No alboms");

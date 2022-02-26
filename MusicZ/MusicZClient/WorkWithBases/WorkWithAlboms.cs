@@ -36,10 +36,18 @@ namespace MusicZClient.WorkWithBases
                     select concreteAlbom).ToList();
         }
 
-        static public List<Albom> PopularAlboms(Context context)
+        static public List<Albom> PopularAlboms(Context context, string condition)
         {
             List<Albom> alboms = GetAllAlboms(context);
             List<Check> checks = WorkWithChecks.GetAllChecks(context);
+
+            if (condition == "year")
+                checks = checks.FindAll(check => check.Date.Year >= DateTime.Now.Year - 1);
+            else if (condition == "month")
+                checks = checks.FindAll(check => check.Date.Month >= DateTime.Now.Month - 1);
+            else if (condition == "week")
+                checks = checks.FindAll(check => check.Date.DayOfWeek >= DateTime.Now.DayOfWeek - 7);
+
             SortedList<int, string> pair = new SortedList<int, string>();
 
             foreach (Albom item in alboms)
