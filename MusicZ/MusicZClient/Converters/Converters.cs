@@ -137,7 +137,7 @@ namespace MusicZClient.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value == null)
-                return "Stiff: undefined";
+                return "Stuff: undefined";
 
             return "Stuff: " + (value as Stuff).Name + " " +
                 (value as Stuff).Surename;

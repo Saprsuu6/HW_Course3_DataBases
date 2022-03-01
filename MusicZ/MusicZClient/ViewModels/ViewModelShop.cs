@@ -37,9 +37,9 @@ namespace MusicZClient.ViewModels
             popularByYear = true;
         }
 
-        private void UpdateClient(object sender, EventArgs e)
+        private async void UpdateClient(object sender, EventArgs e)
         {
-            client = sender as Client;
+            client = await Task.Run(()=> WorkWithClients.GetClient(context, sender as Client));
             Alboms = GetAlboms();
         }
 
@@ -139,6 +139,8 @@ namespace MusicZClient.ViewModels
                         if (Albom.ReservedByClient != null && Albom.ReservedByClient.Id != client.Id)
                             throw new ApplicationException("Reserved.");
 
+                        Albom.ReservedByClient = null;
+
                         Check check = new Check()
                         {
                             Date = DateTime.Now,
@@ -147,7 +149,7 @@ namespace MusicZClient.ViewModels
                         };
 
                         Albom.Quantity -= amount;
-                        check.AmountAlboms += amount;
+                        check.AmountAlboms = amount;
 
                         await Task.Run(() =>
                         {

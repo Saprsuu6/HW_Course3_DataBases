@@ -198,7 +198,6 @@ namespace MusicZ.ViewModels
                 && Reg.CheckNumber(albom.AmountTracks.ToString())
                 && Reg.CheckNameSurename(albom.Genre)
                 && Reg.CheckNumber(albom.YearOfPublish.ToString())
-                && Reg.CheckNumber(albom.YearOfAdding.ToString())
                 && Reg.CheckNumber(albom.CostPrice.ToString())
                 && Reg.CheckNumber(albom.PriceForSale.ToString())
                 && Reg.CheckNumber(albom.Discount.ToString()))

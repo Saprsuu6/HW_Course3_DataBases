@@ -21,6 +21,7 @@ namespace MusicZClient.WorkWithBases
 
         static public void UpdateAlbom(Context context, Albom albom)
         {
+            
             context.SaveChanges();
         }
 

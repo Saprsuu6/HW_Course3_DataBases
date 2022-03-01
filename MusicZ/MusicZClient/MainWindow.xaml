@@ -117,6 +117,7 @@
                                 <TextBlock Text="{Binding Id_Stuff, Converter={StaticResource IdStuffConverter}}"/>
                                 <TextBlock Text="{Binding Id_Client, Converter={StaticResource IdClientConverter}}"/>
                                 <TextBlock Text="{Binding Id_Albom, Converter={StaticResource IdAlbomConverter}}"/>
+                                <TextBlock Text="{Binding AmountAlboms, StringFormat=Amount: {0}, Converter={StaticResource NumberConverter}}"/>
                                 <TextBlock Text="{Binding Date, Converter={StaticResource BirthdayConverter}}"/>
                             </StackPanel>
                         </DataTemplate>
