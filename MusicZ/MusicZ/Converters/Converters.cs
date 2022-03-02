@@ -136,6 +136,9 @@ namespace MusicZ.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null)
+                return "Stuff is undefined";
+
             return "Stuff: " + (value as Stuff).Name + " " +
                 (value as Stuff).Surename;
         }
@@ -152,6 +155,9 @@ namespace MusicZ.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null)
+                return "Client is undefined";
+
             return "Client: " + (value as Client).Name + " " +
                 (value as Client).Surename;
         }
@@ -168,6 +174,9 @@ namespace MusicZ.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null)
+                return "Albom is undefined";
+
             return "Albom: " + (value as Albom).Name + " (" +
                 (value as Albom).BandName + ")";
         }

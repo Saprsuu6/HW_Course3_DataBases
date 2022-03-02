@@ -121,10 +121,10 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
-                                <TextBlock Text="{Binding Surename, Converter={StaticResource SurenameConverter}}"/>
-                                <TextBlock Text="{Binding Phone, Converter={StaticResource PhoneConverter}}"/>
-                                <TextBlock Text="{Binding ProcentFromsale, Converter={StaticResource ProcentConverter}}"/>
+                                <TextBlock Text="{Binding Name, StringFormat=Name: {0}}"/>
+                                <TextBlock Text="{Binding Surename, StringFormat=Surename: {0}}"/>
+                                <TextBlock Text="{Binding Phone, StringFormat=Phone: {0}}"/>
+                                <TextBlock Text="{Binding ProcentFromsale, StringFormat='Procent from sale: {0}%'}"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -186,10 +186,10 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
-                                <TextBlock Text="{Binding Surename, Converter={StaticResource SurenameConverter}}"/>
-                                <TextBlock Text="{Binding Phone, Converter={StaticResource PhoneConverter}}"/>
-                                <TextBlock Text="{Binding Birthday, Converter={StaticResource BirthdayConverter}}"/>
+                                <TextBlock Text="{Binding Name, StringFormat=Name: {0}}"/>
+                                <TextBlock Text="{Binding Surename, StringFormat=Surename: {0}}"/>
+                                <TextBlock Text="{Binding Phone, StringFormat=Phone: {0}}"/>
+                                <TextBlock Text="{Binding Birthday, StringFormat=Birthday: {0}}"/>
                                 <TextBlock Text="{Binding IsRegularClient, Converter={StaticResource IsRegularClientConverter}}"/>
                             </StackPanel>
                         </DataTemplate>
@@ -284,10 +284,10 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Name, Converter={StaticResource NameConverter}}"/>
-                                <TextBlock Text="{Binding BandName, Converter={StaticResource BandNameConverter}}"/>
-                                <TextBlock Text="{Binding Publisher, Converter={StaticResource PublisherConverter}}"/>
-                                <TextBlock Text="{Binding AmountTracks, Converter={StaticResource AmountTracksConverter}}"/>
+                                <TextBlock Text="{Binding Name, StringFormat=Name: {0}}"/>
+                                <TextBlock Text="{Binding BandName, StringFormat='Band name: {0}'}"/>
+                                <TextBlock Text="{Binding Publisher, StringFormat=Publisher: {0}}"/>
+                                <TextBlock Text="{Binding AmountTracks, StringFormat='Amount tracks: {0}'}"/>
                                 <TextBlock Text="{Binding Quantity, Converter={StaticResource QuantityAlbomsConverter}}"/>
                                 <TextBlock Text="{Binding Genre, Converter={StaticResource GenreConverter}}"/>
                                 <TextBlock Text="{Binding YearOfPublish, Converter={StaticResource YearOfPublishConverter}}"/>
