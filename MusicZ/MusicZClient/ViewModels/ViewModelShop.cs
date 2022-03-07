@@ -189,6 +189,8 @@ namespace MusicZClient.ViewModels
 
                         if (Albom.ReservedByClient != null && Albom.ReservedByClient.Id != client.Id)
                             throw new ApplicationException("Reserved.");
+                        else if (Albom.ReservedByClient != null && Albom.ReservedByClient.Id == client.Id)
+                            throw new ApplicationException("You already reserved that.");
 
                         Albom.ReservedByClient = client;
                         await Task.Run(() => WorkWithAlboms.UpdateAlbom(context, albom));
