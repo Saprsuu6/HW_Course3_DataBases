@@ -13,7 +13,7 @@ namespace MusicZClient.ViewModels
 {
     class ViewModelClient : INotifyPropertyChanged
     {
-        private DateTime birthday;
+        private DateTime birthday ;
         private Context context;
         private Client client;
         private Check check;

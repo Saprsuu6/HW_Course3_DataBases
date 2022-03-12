@@ -109,6 +109,7 @@ namespace MusicZ.ViewModels
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         Alboms.Remove(albom);
                         updateAlboms.Invoke(this, EventArgs.Empty);
+                        updateChecks.Invoke(this, EventArgs.Empty);
                     }
                     catch (Exception)
                     {

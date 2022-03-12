@@ -231,6 +231,10 @@ namespace MusicZ.ViewModels
                     MessageBox.Show("Loading...", "Message",
                             MessageBoxButton.OK, MessageBoxImage.Information);
 
+                    if (check.Id_Client == null || check.Id_Albom == null)
+                        MessageBox.Show("Select at least on check", "Message",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
+
                     try
                     {
                         Checks = new ObservableCollection<Check>
@@ -310,7 +314,6 @@ namespace MusicZ.ViewModels
                 && Reg.CheckNumber(albom.AmountTracks.ToString())
                 && Reg.CheckNameSurename(albom.Genre)
                 && Reg.CheckNumber(albom.YearOfPublish.ToString())
-                && Reg.CheckNumber(albom.YearOfAdding.ToString())
                 && Reg.CheckNumber(albom.CostPrice.ToString())
                 && Reg.CheckNumber(albom.PriceForSale.ToString())
                 && Reg.CheckNumber(albom.Discount.ToString()))

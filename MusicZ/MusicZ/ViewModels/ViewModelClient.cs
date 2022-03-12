@@ -51,33 +51,6 @@ namespace MusicZ.ViewModels
             }
         }
 
-        public RelayCommand Remove
-        {
-            get
-            {
-                return command = new RelayCommand(async obj =>
-                {
-                    MessageBox.Show("Loading...", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    try
-                    {
-                        await Task.Run(() => WorkWithClients.RemoveClient(context, client));
-                        MessageBox.Show("Client was succesfully removed.", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-                        Clients.Remove(client);
-                        updateClients.Invoke(this, EventArgs.Empty);
-                        updateChecks.Invoke(this, EventArgs.Empty);
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Client was not succesfully removed.", "Message",
-                            MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                }, obj => CanOnClick());
-            }
-        }
-
         public RelayCommand Upadate
         {
             get

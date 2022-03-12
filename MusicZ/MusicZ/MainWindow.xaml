@@ -168,9 +168,7 @@
                               IsChecked="{Binding Client.IsRegularClient, UpdateSourceTrigger=PropertyChanged}"/>
                 </Grid>
 
-                <UniformGrid Grid.Column="1" Rows="5" Margin="5">
-                    <Button Content="Remove client" Grid.Row="1"
-                            Command="{Binding Remove}"/>
+                <UniformGrid Grid.Column="1" Rows="4" Margin="5">
                     <Button Content="Update client" Grid.Row="3"
                             Command="{Binding Upadate}"/>
                     <Button Content="Find client" Grid.Row="3"
@@ -308,45 +306,9 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column="0" Margin="5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock Grid.Column="0" Grid.Row="0" Text="Stuff:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="1" Text="Client:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Albom:"/>
-
-                    <ComboBox Grid.Column="1" Grid.Row="0" 
-                              ItemsSource="{Binding Stuffs}"
-                              SelectedItem="{Binding Stuff,
-                        UpdateSourceTrigger=PropertyChanged}"
-                              DisplayMemberPath="Name"/>
-                    <ComboBox Grid.Column="1" Grid.Row="1"
-                              ItemsSource="{Binding Clients}"
-                              SelectedItem="{Binding Client,
-                        UpdateSourceTrigger=PropertyChanged}"
-                               DisplayMemberPath="Name"/>
-                    <ComboBox Grid.Column="1" Grid.Row="2"
-                              ItemsSource="{Binding Alboms}" 
-                              SelectedItem="{Binding Albom,
-                        UpdateSourceTrigger=PropertyChanged}"
-                               DisplayMemberPath="Name"/>
-                </Grid>
-
-                <UniformGrid Grid.Column="1" Rows="5" Margin="5">
-                    <Button Content="Add check" Grid.Row="1"
-                            Command="{Binding Add}"/>
+                <UniformGrid Grid.Column="0" Rows="4" Margin="5">
                     <Button Content="Remove check" Grid.Row="3"
                             Command="{Binding Remove}"/>
                     <Button Content="Find check" Grid.Row="3"
@@ -357,7 +319,7 @@
                             Command="{Binding ClearFields}"/>
                 </UniformGrid>
 
-                <ListBox Grid.Column="2" Margin="5" ItemsSource="{Binding Checks}"
+                <ListBox Grid.Column="1" Margin="5" ItemsSource="{Binding Checks}"
                          SelectedItem="{Binding Check}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
