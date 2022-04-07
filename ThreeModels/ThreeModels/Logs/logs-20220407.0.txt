@@ -1,0 +1,652 @@
+2022-04-07 13:11:09.163 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:11:09.173 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:11:09.175 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:14:48.099 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:14:48.113 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:14:48.116 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:15:08.885 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:15:08.896 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:15:08.898 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:15:10.412 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[BusinesLogic.Models.MyQuest]', but this ViewDataDictionary instance requires a model item of type 'System.Collections.Generic.IEnumerable`1[ThreeModels.Models.Quest]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method54(Closure , ViewDataDictionary )
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.CreateViewDataDictionary(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 13:17:00.139 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:17:00.150 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:17:00.151 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:17:05.824 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[BusinesLogic.Models.MyQuest]', but this ViewDataDictionary instance requires a model item of type 'System.Collections.Generic.IEnumerable`1[ThreeModels.Models.Quest]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method54(Closure , ViewDataDictionary )
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.CreateViewDataDictionary(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 13:17:35.085 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:17:35.095 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:17:35.097 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:17:43.019 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[BusinesLogic.Models.MyQuest]', but this ViewDataDictionary instance requires a model item of type 'System.Collections.Generic.IEnumerable`1[ThreeModels.Models.Quest]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method54(Closure , ViewDataDictionary )
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.CreateViewDataDictionary(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 13:22:01.983 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:22:01.997 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:22:01.999 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:22:09.514 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The layout page '/Views/Shared/_Layout.cshtml' cannot find the section 'Navigation' in the content page '/Views/Home/QuestList.cshtml'.
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSectionAsyncCore(String sectionName, Boolean required)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name, Boolean required)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name)
+   at AspNetCoreGeneratedDocument.Views_Shared__Layout.<ExecuteAsync>b__20_1() in C:\Users\coffe\Desktop\ThreeModels\ThreeModels\Views\Shared\_Layout.cshtml:line 12
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCoreGeneratedDocument.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 13:22:36.393 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:22:36.406 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:22:36.408 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:23:36.484 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:23:36.500 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:23:36.504 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:24:08.804 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:24:08.817 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:24:08.819 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:36:22.688 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:36:22.702 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:36:22.703 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:37:03.271 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:37:03.284 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:37:03.286 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:37:05.184 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The layout page '/Views/Shared/_Layout.cshtml' cannot find the section 'Navigation' in the content page '/Views/Home/QuestList.cshtml'.
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSectionAsyncCore(String sectionName, Boolean required)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name, Boolean required)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name)
+   at AspNetCoreGeneratedDocument.Views_Shared__Layout.<ExecuteAsync>b__21_2() in C:\Users\coffe\Desktop\ThreeModels\ThreeModels\Views\Shared\_Layout.cshtml:line 18
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCoreGeneratedDocument.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 13:37:56.830 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:37:56.848 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:37:56.850 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:38:25.697 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:38:25.710 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:38:25.711 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:39:28.517 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:39:28.527 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:39:28.529 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:40:17.415 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:40:17.432 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:40:17.439 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:41:03.703 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:41:03.716 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:41:03.718 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:41:27.331 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:41:27.340 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:41:27.342 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:41:42.935 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:41:42.945 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:41:42.947 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:42:20.781 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:42:20.794 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:42:20.796 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:43:12.825 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:43:12.838 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:43:12.840 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:44:29.879 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:44:29.888 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:44:29.890 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:44:59.699 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:44:59.710 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:44:59.711 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:45:20.685 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The layout page '/Views/Shared/_Layout.cshtml' cannot find the section 'Navigation' in the content page '/Views/ShowQuest/ShowQuest.cshtml'.
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSectionAsyncCore(String sectionName, Boolean required)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name, Boolean required)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name)
+   at AspNetCoreGeneratedDocument.Views_Shared__Layout.<ExecuteAsync>b__21_1() in C:\Users\coffe\Desktop\ThreeModels\ThreeModels\Views\Shared\_Layout.cshtml:line 12
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCoreGeneratedDocument.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 13:47:24.818 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:47:24.829 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:47:24.831 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:47:27.971 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: RenderSection invocation in '/Views/ShowQuest/ShowQuest.cshtml' is invalid. RenderSection can only be called from a layout page.
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureMethodCanBeInvoked(String methodName)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name, Boolean required)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name)
+   at AspNetCoreGeneratedDocument.Views_ShowQuest_ShowQuest.ExecuteAsync() in C:\Users\coffe\Desktop\ThreeModels\ThreeModels\Views\ShowQuest\ShowQuest.cshtml:line 16
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 13:47:46.068 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:47:46.080 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:47:46.082 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:47:49.237 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: RenderSection invocation in '/Views/ShowQuest/ShowQuest.cshtml' is invalid. RenderSection can only be called from a layout page.
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.EnsureMethodCanBeInvoked(String methodName)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name, Boolean required)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPage.RenderSection(String name)
+   at AspNetCoreGeneratedDocument.Views_ShowQuest_ShowQuest.ExecuteAsync() in C:\Users\coffe\Desktop\ThreeModels\ThreeModels\Views\ShowQuest\ShowQuest.cshtml:line 12
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 13:48:12.699 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:48:12.711 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:48:12.713 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:48:39.215 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:48:39.231 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:48:39.234 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 13:49:52.283 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 13:49:52.294 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 13:49:52.296 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:06:34.937 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:06:34.948 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:06:34.949 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:07:00.438 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:07:00.448 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:07:00.450 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:09:30.356 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:09:30.367 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:09:30.368 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:10:52.038 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:10:52.054 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:10:52.056 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:12:10.405 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:12:10.421 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:12:10.423 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:12:40.755 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:12:40.765 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:12:40.766 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:13:09.907 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:13:09.917 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:13:09.918 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:13:56.753 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:13:56.762 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:13:56.764 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:15:10.250 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:15:10.267 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:15:10.269 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:16:30.164 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:16:30.176 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:16:30.180 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:31:24.670 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:31:24.680 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:31:24.682 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:35:21.170 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:35:21.186 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:35:21.188 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:37:06.366 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:37:06.381 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:37:06.383 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:37:42.902 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:37:42.914 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:37:42.916 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:38:24.048 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:38:24.058 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:38:24.059 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:39:00.868 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:39:00.883 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:39:00.884 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:39:46.272 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:39:46.286 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:39:46.288 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:40:41.602 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:40:41.617 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:40:41.619 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:41:29.734 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:41:29.746 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:41:29.747 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:42:54.199 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:42:54.215 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:42:54.217 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:43:21.692 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:43:21.711 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:43:21.713 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 14:44:57.656 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 14:44:57.670 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 14:44:57.674 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:13:21.390 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:13:21.439 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:13:21.440 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:13:38.080 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:13:38.095 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:13:38.097 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:15:07.482 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:15:07.496 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:15:07.498 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:19:04.914 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:19:04.924 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:19:04.926 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:21:24.610 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:21:24.620 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:21:24.621 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:22:00.447 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:22:00.459 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:22:00.461 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:23:03.445 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:23:03.460 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:23:03.462 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:33:02.619 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:33:02.634 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:33:02.636 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:34:02.705 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:34:02.716 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:34:02.717 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:34:17.260 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:34:17.271 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:34:17.273 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:34:27.507 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:34:27.516 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:34:27.518 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:34:49.683 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:34:49.693 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:34:49.695 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:35:39.897 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:35:39.911 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:35:39.912 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:36:05.688 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:36:05.698 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:36:05.699 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:40:07.099 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:40:07.108 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:40:07.110 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:41:49.678 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:41:49.692 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:41:49.693 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:42:44.873 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:42:44.884 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:42:44.885 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:44:18.436 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:44:18.452 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:44:18.454 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 18:49:37.657 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 18:49:37.668 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 18:49:37.669 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:03:35.116 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:03:35.131 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:03:35.133 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:07:38.170 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:07:38.182 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:07:38.184 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:08:17.985 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:08:17.996 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:08:17.998 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:09:03.366 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:09:03.381 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:09:03.383 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:15:31.744 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:15:31.761 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:15:31.763 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:16:34.454 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:16:34.472 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:16:34.475 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:17:18.939 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:17:18.955 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:17:18.957 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:18:22.741 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:18:22.751 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:18:22.753 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:19:02.427 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:19:02.438 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:19:02.439 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:33:21.785 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:33:21.796 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:33:21.797 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:41:22.751 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:41:22.763 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:41:22.764 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:44:30.150 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:44:30.165 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:44:30.166 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:45:56.384 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:45:56.394 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:45:56.396 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:47:42.892 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:47:42.907 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:47:42.909 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:51:39.245 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:51:39.258 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:51:39.260 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:52:11.600 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:52:11.610 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:52:11.612 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:54:33.015 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:54:33.027 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:54:33.028 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 19:56:46.269 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 19:56:46.299 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 19:56:46.301 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:28:14.213 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:28:14.227 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:28:14.229 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:34:14.060 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:34:14.075 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:34:14.077 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:34:47.332 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:34:47.343 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:34:47.345 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:36:46.181 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:36:46.194 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:36:46.196 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:48:15.424 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:48:15.440 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:48:15.442 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:54:14.314 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:54:14.323 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:54:14.325 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:55:21.396 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:55:21.406 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:55:21.407 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:57:38.978 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:57:38.988 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:57:38.990 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:58:42.847 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:58:42.857 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:58:42.859 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 20:59:52.265 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 20:59:52.280 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 20:59:52.281 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:01:47.430 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:01:47.441 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:01:47.443 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:03:23.791 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:03:23.811 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:03:23.814 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:03:58.811 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:03:58.826 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:03:58.828 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:04:35.674 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:04:35.684 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:04:35.686 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:06:30.426 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:06:30.436 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:06:30.438 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:07:55.161 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:07:55.171 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:07:55.173 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:08:59.748 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:08:59.766 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:08:59.768 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:10:50.409 +03:00 [Error] Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: The view 'Update' was not found. Searched locations: /Views/Account/Update.cshtml, /Views/Shared/Update.cshtml
+2022-04-07 21:10:50.481 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Update' was not found. The following locations were searched:
+/Views/Account/Update.cshtml
+/Views/Shared/Update.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 21:13:18.355 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:13:18.374 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:13:18.377 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:14:55.040 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:14:55.054 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:14:55.056 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:16:57.684 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:16:57.694 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:16:57.696 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:18:45.867 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:18:45.878 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:18:45.880 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:19:43.494 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCoreGeneratedDocument.Views_Account_ShowAccount.ExecuteAsync() in C:\Users\coffe\Desktop\ThreeModels\ThreeModels\Views\Account\ShowAccount.cshtml:line 16
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-07 21:20:08.373 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:20:08.387 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:20:08.388 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:22:14.328 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:22:14.338 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:22:14.340 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:23:54.628 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:23:54.637 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:23:54.639 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:25:11.413 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:25:11.423 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:25:11.424 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+2022-04-07 21:27:04.312 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-07 21:27:04.324 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-07 21:27:04.326 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\ThreeModels\ThreeModels

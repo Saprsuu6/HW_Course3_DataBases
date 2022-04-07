@@ -1,0 +1,55 @@
+﻿@model Quest
+@{
+    ViewData["Title"] = "Update quest";
+}
+
+@section Navigation {
+    @{
+        await Html.RenderPartialAsync("Navigation");
+    }
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" asp-action="Update">
+    <label>Name</label><br />
+    <input type="text" asp-for="Name" value="@Model.Name"/><br />
+    <span asp-validation-for="Name"></span><br />
+
+    <label>Photo (url)</label><br />
+    <input type="text" asp-for="Photo" value="@Model.Photo"/><br />
+    <span asp-validation-for="Photo"></span><br />
+
+    <label>Minimum palyers</label><br />
+    <input type="number" asp-for="MinPalyers" value="@Model.MinPalyers"/><br />
+    <span asp-validation-for="MinPalyers"></span><br />
+
+    <label>Maximum players</label><br />
+    <input type="number" asp-for="MaxPalyers" value="@Model.MaxPalyers"/><br />
+    <span asp-validation-for="MaxPalyers"></span><br />
+
+    <label>Time</label><br />
+    <input type="text" asp-for="Time" value="@Model.Time"/><br />
+    <span asp-validation-for="Time"></span><br />
+
+    <label>Rating</label><br />
+    <input type="number" asp-for="Rating" value="@Model.Rating"/><br />
+    <span asp-validation-for="Rating"></span><br />
+
+    <input type="submit" value="Update" /><br /><br />
+
+    <input type="hidden" asp-for="Id" value="@Model.Id"/>
+</form>
+
+<div>
+    @if(ViewBag.Message != null)
+    {
+        <p>@ViewBag.Message</p>
+    }
+</div>
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

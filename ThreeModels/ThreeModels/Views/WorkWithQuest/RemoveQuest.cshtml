@@ -1,0 +1,25 @@
+﻿@model Quest
+@{
+    ViewData["Title"] = "RemoveQuest";
+}
+
+@section Navigation {
+    @{
+        await Html.RenderPartialAsync("Navigation");
+    }
+}
+
+@await Html.PartialAsync("ShowAllInfoQuest")
+
+<form method="post" asp-action="Remove">
+    <button>Remove quest</button>
+
+    <input type="hidden" asp-for="Id" value="@Model.Id"/>
+    <input type="hidden" asp-for="Name" value="@Model.Name"/>
+    <input type="hidden" asp-for="Photo" value="@Model.Photo"/>
+    <input type="hidden" asp-for="MinPalyers" value="@Model.MinPalyers"/>
+    <input type="hidden" asp-for="MaxPalyers" value="@Model.MaxPalyers"/>
+    <input type="hidden" asp-for="Time" value="@Model.Time"/><br />
+    <input type="hidden" asp-for="Rating" value="@Model.Rating"/><br />
+</form>
+

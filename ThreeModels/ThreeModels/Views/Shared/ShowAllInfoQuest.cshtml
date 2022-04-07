@@ -1,0 +1,16 @@
+﻿@model Quest
+@{
+    ViewData["Title"] = "ShowAllInfoQuest";
+}
+
+<h1>@Model.Name</h1>
+<p>
+    <img width=300 height=200 src=@Model.Photo alt="Photo" align="left" 
+    vspace="10" hspace="10">
+    Name: @Model.Name<br/>
+    Minimum players: @Model.MinPalyers<br/>
+    Maximum players: @Model.MaxPalyers<br/>
+    Time: @Model.Time<br/>
+    Rating: @Model.Rating from 5
+</p>
+

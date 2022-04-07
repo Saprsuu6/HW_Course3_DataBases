@@ -1,0 +1,88 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ThreeModels
+build_property.RootNamespace = ThreeModels
+build_property.ProjectDir = C:\Users\coffe\Desktop\ThreeModels\ThreeModels\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\coffe\Desktop\ThreeModels\ThreeModels
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Account/ShowAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaG93QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Account/ShowAccountUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaG93QWNjb3VudFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/AutoReg/Autorisation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b1JlZ1xBdXRvcmlzYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/AutoReg/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b1JlZ1xSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Home/QuestExeptionEmpty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWVzdEV4ZXB0aW9uRW1wdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Home/QuestList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWVzdExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Shared/Navigation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5hdmlnYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Shared/ShowAllInfoQuest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNob3dBbGxJbmZvUXVlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/ShowQuest/ShowQuest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvd1F1ZXN0XFNob3dRdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/WorkWithQuest/CreateQuest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1dpdGhRdWVzdFxDcmVhdGVRdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/WorkWithQuest/RemoveQuest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1dpdGhRdWVzdFxSZW1vdmVRdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/WorkWithQuest/UpdateQuest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1dpdGhRdWVzdFxVcGRhdGVRdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/ThreeModels/ThreeModels/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,13 @@
+﻿@model Quest
+@{
+    ViewData["Title"] = "ShowQuest";
+}
+
+@section Navigation {
+    @{
+        await Html.RenderPartialAsync("Navigation");
+    }
+}
+
+@await Html.PartialAsync("ShowAllInfoQuest")
+

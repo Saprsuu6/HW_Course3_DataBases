@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Quest>
+@{
+    ViewData["Title"] = "QuestList";
+}
+
+@section Navigation {
+    @{
+        await Html.RenderPartialAsync("Navigation");
+    }
+}
+
+<ul class="ulList">
+    @foreach(var item in Model)
+    {
+        <li class="liList">
+            <img width=200 height=150 src=@item.Photo alt="Photo"/>
+            <p class="describe">@item.Name</p>
+            <p class="describe">Minimum players: @item.MinPalyers</p>
+            <p class="describe">Maximum players: @item.MaxPalyers</p>
+            <p class="describe">...</p>
+
+            @if (ViewBag.Session != "admin")
+            {
+                <div class="center">
+                    <form method="get" asp-controller="ShowQuest" asp-action="ShowQuest">
+                        <button name="name" value=@item.Name>Read more</button>
+                    </form>
+                </div>
+            }
+            @if (ViewBag.Session == "admin")
+            {
+                <div class="center">
+                    <form method="get" asp-controller="WorkWithQuest" asp-action="RemoveView">
+                        <button name="name" value=@item.Name>Remove quest</button>
+                    </form>
+                </div>
+                
+                <br />
+
+                <div class="center">
+                    <form method="get" asp-controller="WorkWithQuest" asp-action="UpdateView">
+                        <button name="name" value=@item.Name>Update quest</button>
+                    </form>
+                </div>
+            }
+        </li>
+    }
+</ul>
+

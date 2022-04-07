@@ -1,0 +1,45 @@
+﻿@model Client
+@{
+    ViewData["Title"] = "Your account";
+}
+
+@section Navigation {
+    @{
+        await Html.RenderPartialAsync("Navigation");
+    }
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<dl class="dl-horizontal">
+    <dt>Name</dt>
+    <dd>@Model.Name</dd>
+    
+    <dt>Surename</dt>
+    <dd>@Model.Surename</dd>
+</dl>
+
+@if(ViewBag.Session != "admin")
+{
+    <div>
+        <form method="post" asp-action="Remove">
+            <button>Remove quest</button>
+
+            <input type="hidden" asp-for="Id" value="@Model.Id"/>
+            <input type="hidden" asp-for="Password" value="@Model.Password"/>
+        </form>   
+    </div>
+
+    <br />
+    
+    <div >
+        <form method="get" asp-action="ShowAccountUpdate">
+            <button>Update quest</button>
+        
+            <input type="hidden" asp-for="Id" value="@Model.Id"/><br />
+            <input type="hidden" asp-for="Name" value="@Model.Name"/>
+            <input type="hidden" asp-for="Surename" value="@Model.Surename"/>
+            <input type="hidden" asp-for="Password" value="@Model.Password"/>
+        </form>  
+    </div>
+}
