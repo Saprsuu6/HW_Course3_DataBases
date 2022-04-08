@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+pvmhqQEBVxXDackzoA8jbxZaV+8SKBaCKqS3OH1o87B56L/WRrrkLVU7VTHwo0T/MYZtV1XH74oZLuw8dGFvQ==",
+  "dgSpecHash": "5CFGxtUCf5YsjR4MaPQTLKSRxOx7HI6n7aYNDZp0i4hEFLnvfRgnm+058oAzEfJ1BqL5hU9I4kmZOKqE4neDTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\ThreeModels\\ThreeModels.csproj",
+  "projectFilePath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\ThreeModels\\ThreeModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\coffe\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\coffe\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

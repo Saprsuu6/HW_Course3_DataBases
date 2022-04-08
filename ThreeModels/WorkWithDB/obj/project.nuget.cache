@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hXTL0EjYVIzSY8WkoqkgzcQvBWx8GgzYEDkOp9Ce8xPizTRfZ3lof54YIl9JFu1qmynbwApOaxkFgutn7MSQzw==",
+  "dgSpecHash": "84A1iZheUH8DmNSsiuljzKESd7Y0hS+Wde2Huwf6145Qp2M1cApjDDzDewvxg0Yod+3lWVGPVnifJMxY3dnIVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj",
+  "projectFilePath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\coffe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\coffe\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

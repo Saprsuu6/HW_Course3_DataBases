@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FOPTTMTkG+T/yxnE5XNu1uAiTLg7KwSAquFYZpnEcyZh8L9AxulglsevWOv7LI7vVvOuq4OODf1dzkFMdkjfrQ==",
+  "dgSpecHash": "6em09EmcMy4tONm/8k4BfFNbSPKMzez2cF09I5+Rvs+pCRKb1gU74Y1SKdxASfE9L2BnA+nHDPt2VbWgdX3dDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj",
+  "projectFilePath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\coffe\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\coffe\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

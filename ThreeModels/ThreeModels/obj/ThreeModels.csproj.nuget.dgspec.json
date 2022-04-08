@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\coffe\\Desktop\\ThreeModels\\ThreeModels\\ThreeModels.csproj": {}
+    "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\ThreeModels\\ThreeModels.csproj": {}
   },
   "projects": {
-    "C:\\Users\\coffe\\Desktop\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj": {
+    "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\coffe\\Desktop\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj",
+        "projectUniqueName": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj",
         "projectName": "BusinesLogic",
-        "projectPath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj",
+        "projectPath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj",
         "packagesPath": "C:\\Users\\coffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\BusinesLogic\\obj\\",
+        "outputPath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\BusinesLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\coffe\\Desktop\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj": {
-                "projectPath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj"
+              "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj": {
+                "projectPath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\coffe\\Desktop\\ThreeModels\\ThreeModels\\ThreeModels.csproj": {
+    "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\ThreeModels\\ThreeModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\coffe\\Desktop\\ThreeModels\\ThreeModels\\ThreeModels.csproj",
+        "projectUniqueName": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\ThreeModels\\ThreeModels.csproj",
         "projectName": "ThreeModels",
-        "projectPath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\ThreeModels\\ThreeModels.csproj",
+        "projectPath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\ThreeModels\\ThreeModels.csproj",
         "packagesPath": "C:\\Users\\coffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\ThreeModels\\obj\\",
+        "outputPath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\ThreeModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -100,8 +100,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\coffe\\Desktop\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj": {
-                "projectPath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj"
+              "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj": {
+                "projectPath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\BusinesLogic\\BusinesLogic.csproj"
               }
             }
           }
@@ -151,14 +151,14 @@
         }
       }
     },
-    "C:\\Users\\coffe\\Desktop\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj": {
+    "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\coffe\\Desktop\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj",
+        "projectUniqueName": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj",
         "projectName": "WorkWithDB",
-        "projectPath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj",
+        "projectPath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\WorkWithDB\\WorkWithDB.csproj",
         "packagesPath": "C:\\Users\\coffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\coffe\\Desktop\\ThreeModels\\WorkWithDB\\obj\\",
+        "outputPath": "C:\\Users\\coffe\\Desktop\\Git(Projects)\\HW_Course3_DataBases\\ThreeModels\\WorkWithDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

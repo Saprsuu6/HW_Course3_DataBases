@@ -20,7 +20,6 @@ namespace ThreeModels
             Host.CreateDefaultBuilder(args)
             .ConfigureLogging((context, builder) =>
             {
-
                 builder.AddConfiguration(context.Configuration.GetSection("Logging"));
                 builder.AddFile();
             })
