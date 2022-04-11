@@ -12,6 +12,8 @@ namespace WorkWithDB.Context
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<Quest> Quests { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Phone> Phones { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

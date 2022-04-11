@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using WorkWithDB.Context;
 using WorkWithDB.Models;
 
@@ -11,7 +9,53 @@ namespace WorkWithDB
         static void Main(string[] args)
         {
             //DataBaseContext context = new DataBaseContext();
-            //WorkWithQuests workWithContext = new WorkWithQuests(context);
+            //WorkWithContacts workWithContext = new WorkWithContacts(context);
+            //
+            //Contact contact = new Contact(
+            //    "mr.qweqwe.2002@li.ru",
+            //    @"Ukrain\Youzne\Chimikov2");
+            //
+            //List<Phone> contacts = new List<Phone>()
+            //{
+            //    new Phone("34535345", contact),
+            //    new Phone("54675675", contact)
+            //};
+            //
+            //contact.Id = 3;
+            //contact.Phones = contacts;
+            //
+            //workWithContext.RemoveContact(contact);
+
+            //Contact contact = new Contact(
+            //    "mr.qweqwe.2002@li.ru",
+            //    @"Ukrain\Youzne\Chimikov2");
+            //
+            //List<Phone> contacts = new List<Phone>()
+            //{
+            //    new Phone("34535345", contact),
+            //    new Phone("54675675", contact)
+            //};
+            //
+            //contact.Id = 3;
+            //contact.Phones = contacts;
+            //
+            //workWithContext.UpdateContacts(contact);
+
+            //Contact contact = new Contact(
+            //    "mr.asd.2002@li.ru",
+            //    @"Ukrain\Youzne\Chimikov2");
+
+            //List<Phone> contacts = new List<Phone>()
+            //{
+            //    new Phone("123456789", contact),
+            //    new Phone("123456789", contact)
+            //};
+
+            //contact.Phones = contacts;
+
+            //workWithContext.AddContacts(contact);
+
+            //Contact contact = workWithContext.GetContacts("coffeei.2002@gmail.com");
 
             //Quest quest = new Quest(
             //    "Some quest",

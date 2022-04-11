@@ -48,7 +48,7 @@ namespace ThreeModels.Controllers
                         new Mapper(new MapperConfiguration(cfg => cfg.CreateMap<MyQuest, Quest>()));
 
                     IEnumerable<Quest> myQuests =
-                        mapper.Map<List<MyQuest>, List<Quest>>(workWithQuests.GetQuests());
+                        mapper.Map<List<Quest>>(workWithQuests.GetQuests());
 
                     return View("QuestList", myQuests);
                 }

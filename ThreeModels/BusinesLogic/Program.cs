@@ -12,7 +12,53 @@ namespace BusinesLogic
     {
         static void Main(string[] args)
         {
-            //Quests quests = new Quests();
+            Contacts quests = new Contacts();
+
+            //MyContacts contact = new MyContacts(
+            //    "mr.asd.2002@list.ru",
+            //    @"Ukrain\Youzne\Chimikov2");
+            //
+            //List<MyPhone> contacts = new List<MyPhone>()
+            //{
+            //    new MyPhone("123456789"),
+            //    new MyPhone("123456789")
+            //}; 
+            //
+            //contact.Phones = contacts;
+            //
+            //quests.AddContacts(contact);
+
+            //quests.GetContacts("coffeei.2002@gmail.com");
+
+            //MyContacts contact = new MyContacts(
+            //    "mr.asdasd.2002@list.ru",
+            //    @"Ukrain\Youzne\Chimikov2");
+            //
+            //List<MyPhone> contacts = new List<MyPhone>()
+            //{
+            //    new MyPhone("234234234"),
+            //    new MyPhone("234234234")
+            //}; 
+            //
+            //contact.Phones = contacts;
+            //contact.Id = 5;
+            //
+            //quests.UpdateContacts(contact);
+
+            //MyContacts contact = new MyContacts(
+            //    "mr.asdasd.2002@list.ru",
+            //    @"Ukrain\Youzne\Chimikov2");
+            //
+            //List<MyPhone> contacts = new List<MyPhone>()
+            //{
+            //    new MyPhone("234234234"),
+            //    new MyPhone("234234234")
+            //};
+            //
+            //contact.Phones = contacts;
+            //contact.Id = 5;
+            //
+            //quests.RemoveContacts(contact);
 
             //MyQuest quest = new MyQuest(
             //    "Some quest",

@@ -31,6 +31,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b1JlZ1xSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/coffe/Desktop/Git(Projects)/HW_Course3_DataBases/ThreeModels/ThreeModels/Views/Contacts/ShowContacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdHNcU2hvd0NvbnRhY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/coffe/Desktop/Git(Projects)/HW_Course3_DataBases/ThreeModels/ThreeModels/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,6 +45,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/coffe/Desktop/Git(Projects)/HW_Course3_DataBases/ThreeModels/ThreeModels/Views/Home/QuestList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWVzdExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/coffe/Desktop/Git(Projects)/HW_Course3_DataBases/ThreeModels/ThreeModels/Views/Shared/Contacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbnRhY3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/coffe/Desktop/Git(Projects)/HW_Course3_DataBases/ThreeModels/ThreeModels/Views/Shared/Error.cshtml]

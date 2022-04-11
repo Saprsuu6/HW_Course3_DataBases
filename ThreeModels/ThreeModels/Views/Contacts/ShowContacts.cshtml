@@ -1,0 +1,15 @@
+﻿@model Contacts
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+@section Navigation {
+    @{
+        await Html.RenderPartialAsync("Navigation");
+    }
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@await Html.PartialAsync("Contacts", Model)
+
