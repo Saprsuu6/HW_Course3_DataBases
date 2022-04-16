@@ -1,15 +1,15 @@
 ﻿@model Contacts
 
 <dl class="dl-horizontal">
-    <dt>Eamil</dt>
+    <dt>@Localizer["Email"]</dt>
     <dd>@Model.Email</dd>
 
-    <dt>Phones</dt>
+    <dt>@Localizer["Location"]</dt>
     @foreach(Phone phone in Model.Phones)
     {
         <dd>@phone.Number</dd>
     }
 
-    <dt>Location</dt>
+    <dt>@Localizer["Phones"]</dt>
     <dd>@Model.CountryTownStreet</dd>
 </dl>

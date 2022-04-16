@@ -127,6 +127,10 @@
             "NetEscapades.Extensions.Logging.RollingFile": {
               "target": "Package",
               "version": "[2.4.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
             }
           },
           "imports": [

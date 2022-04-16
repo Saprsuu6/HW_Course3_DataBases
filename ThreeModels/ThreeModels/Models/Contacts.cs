@@ -13,12 +13,16 @@ namespace ThreeModels.Models
         }
 
         public int Id { get; set; }
-        [Required, RegularExpression(@"^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$",
-            ErrorMessage = @"Not corrent format.")]
+        [Required(ErrorMessage = "EmailRequired"),
+            RegularExpression(@"^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$", ErrorMessage = "RegexEmail"),
+            MaxLength(50, ErrorMessage = "MaxLengthEmail"),
+            Display(Name = "Email")]
         public string Email { get; set; }
-        [Required(ErrorMessage = @"Not corrent format")]
+        [Required(ErrorMessage = "CTSRequired"),
+            Display(Name = "CountryTownStreet")]
         public string CountryTownStreet { get; set; }
-        [Required]
+        [Required(ErrorMessage = "PhonesRequired"),
+            Display(Name = "Phones")]
         public virtual List<Phone> Phones { get; set; }
     }
 }

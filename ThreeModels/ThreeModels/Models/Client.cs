@@ -13,14 +13,20 @@ namespace ThreeModels.Models
         }
 
         public int Id { get; set; }
-        [Required, RegularExpression(@"^[^\/:*?<>|+]+$",
-            ErrorMessage = @"Forbidden symbols"), MaxLength(50)]
+        [Required(ErrorMessage = "NameRequired"),
+            RegularExpression(@"^[^\/:*?<>|+]+$", ErrorMessage = "RegexNameSurename"),
+            MaxLength(50, ErrorMessage = "NameSurenameMaxLength"),
+            Display(Name = "Name")]
         public string Name { get; set; }
-        [Required, RegularExpression(@"^[^\/:*?<>|+]+$",
-            ErrorMessage = @"Forbidden symbols"), MaxLength(50),]
+        [Required(ErrorMessage = "SurenameRequired"),
+            RegularExpression(@"^[^\/:*?<>|+]+$", ErrorMessage = "RegexNameSurename"),
+            MaxLength(50, ErrorMessage = "NameSurenameMaxLength"),
+            Display(Name = "Surename")]
         public string Surename { get; set; }
-        [Required, RegularExpression(@"^([a-z]+[A-Z]+[0-9]+|[a-z]+[0-9]+[A-Z]+|[A-Z]+[a-z]+[0-9]+|[A-Z]+[0-9]+[a-z]+|[0-9]+[a-z]+[A-Z]+|[0-9]+[A-Z]+[a-z]+)$",
-            ErrorMessage = @"Uncorrent password"), MaxLength(50)]
+        [Required(ErrorMessage = "PasswordRequired"),
+            RegularExpression(@"^([a-z]+[A-Z]+[0-9]+|[a-z]+[0-9]+[A-Z]+|[A-Z]+[a-z]+[0-9]+|[A-Z]+[0-9]+[a-z]+|[0-9]+[a-z]+[A-Z]+|[0-9]+[A-Z]+[a-z]+)$", ErrorMessage = "RegexPassword"),
+            MaxLength(50, ErrorMessage = "MaxLength"),
+            Display(Name = "Password")]
         public string Password { get; set; }
     }
 }

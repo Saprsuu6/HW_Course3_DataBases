@@ -4,6 +4,7 @@ using BusinesLogic.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Globalization;
 using ThreeModels.Models;
 
 namespace ThreeModels.Controllers
@@ -133,7 +134,11 @@ namespace ThreeModels.Controllers
             }
             else
             {
-                ViewBag.Message = "Fields are not valid.";
+                if (CultureInfo.CurrentCulture.Name == "en")
+                    ViewBag.Message = "Fields are not valid.";
+                else if (CultureInfo.CurrentCulture.Name == "ru")
+                    ViewBag.Message = "Поля не валидные.";
+                
                 return View("UpdateQuest");
             }
         }

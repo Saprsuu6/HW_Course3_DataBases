@@ -1,6 +1,6 @@
 ﻿@model Client
 @{
-    ViewData["Title"] = "Your account";
+    ViewData["Title"] = Localizer["Header"];
 }
 
 @section Navigation {
@@ -9,13 +9,13 @@
     }
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>@Localizer["Header"]</h1>
 
 <dl>
-    <dt>Name</dt>
+    <dt>@Localizer["Name"]</dt>
     <dd>@Model.Name</dd>
     
-    <dt>Surename</dt>
+    <dt>@Localizer["Surename"]</dt>
     <dd>@Model.Surename</dd>
 </dl>
 
@@ -23,7 +23,7 @@
 {
     <div>
         <form method="post" asp-action="Remove">
-            <button>Remove quest</button>
+            <button>@Localizer["Remove"]</button>
 
             <input type="hidden" asp-for="Id" value="@Model.Id"/>
             <input type="hidden" asp-for="Password" value="@Model.Password"/>
@@ -34,7 +34,7 @@
     
     <div >
         <form method="get" asp-action="ShowAccountUpdate">
-            <button>Update quest</button>
+            <button>@Localizer["Update"]</button>
         
             <input type="hidden" asp-for="Id" value="@Model.Id"/><br />
             <input type="hidden" asp-for="Name" value="@Model.Name"/>

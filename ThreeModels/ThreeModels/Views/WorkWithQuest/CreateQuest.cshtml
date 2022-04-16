@@ -1,6 +1,6 @@
 ﻿@model Quest
 @{
-    ViewData["Title"] = "Create quest";
+    ViewData["Title"] = @Localizer["Header"];
 }
 
 @section Navigation {
@@ -12,31 +12,25 @@
 <h1>@ViewData["Title"]</h1>
 
 <form method="post" asp-action="Create">
-    <label>Name</label><br />
-    <input type="text" asp-for="Name"/><br />
+    <input type="text" asp-for="Name" placeholder="@Localizer["Name"]"/><br />
     <span asp-validation-for="Name"></span><br />
 
-    <label>Photo (url)</label><br />
-    <input type="text" asp-for="Photo"/><br />
+    <input type="text" asp-for="Photo" placeholder="@Localizer["Photo"]"/><br />
     <span asp-validation-for="Photo"></span><br />
 
-    <label>Minimum palyers</label><br />
-    <input type="number" asp-for="MinPalyers"/><br />
+    <input type="number" asp-for="MinPalyers" placeholder="@Localizer["MinPlayers"]"/><br />
     <span asp-validation-for="MinPalyers"></span><br />
 
-    <label>Maximum players</label><br />
-    <input type="number" asp-for="MaxPalyers"/><br />
+    <input type="number" asp-for="MaxPalyers" placeholder="@Localizer["MaxPlayers"]"/><br />
     <span asp-validation-for="MaxPalyers"></span><br />
 
-    <label>Time</label><br />
-    <input type="text" asp-for="Time"/><br />
+    <input type="text" asp-for="Time" placeholder="@Localizer["Time"]"/><br />
     <span asp-validation-for="Time"></span><br />
 
-    <label>Rating</label><br />
-    <input type="number" asp-for="Rating"/><br />
+    <input type="number" asp-for="Rating" placeholder="@Localizer["Rating"]"/><br />
     <span asp-validation-for="Rating"></span><br />
 
-    <input type="submit" value="Save" /><br /><br />
+    <input type="submit" value="@Localizer["Button"]" /><br /><br />
 </form>
 
 <div>

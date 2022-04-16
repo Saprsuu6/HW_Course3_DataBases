@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Quest>
 @{
-    ViewData["Title"] = "QuestList";
+    ViewData["Title"] = Localizer["Header"];
 }
 
 @section Navigation {
@@ -9,21 +9,23 @@
     }
 }
 
+<h1>@Localizer["Header"]</h1>
+
 <ul class="ulList">
     @foreach(var item in Model)
     {
         <li class="liList">
             <img width=200 height=150 src=@item.Photo alt="Photo"/>
             <p class="describe">@item.Name</p>
-            <p class="describe">Minimum players: @item.MinPalyers</p>
-            <p class="describe">Maximum players: @item.MaxPalyers</p>
+            <p class="describe">@Localizer["MinPlayers"]: @item.MinPalyers</p>
+            <p class="describe">@Localizer["MaxPlayers"]: @item.MaxPalyers</p>
             <p class="describe">...</p>
 
             @if (ViewBag.Session != "admin")
             {
                 <div class="center">
                     <form method="get" asp-controller="ShowQuest" asp-action="ShowQuest">
-                        <button name="name" value=@item.Name>Read more</button>
+                        <button name="name" value=@item.Name>@Localizer["ReadMore"]</button>
                     </form>
                 </div>
             }
@@ -31,7 +33,7 @@
             {
                 <div class="center">
                     <form method="get" asp-controller="WorkWithQuest" asp-action="RemoveView">
-                        <button name="name" value=@item.Name>Remove quest</button>
+                        <button name="name" value=@item.Name>@Localizer["RemoveQuest"]</button>
                     </form>
                 </div>
                 
@@ -39,7 +41,7 @@
 
                 <div class="center">
                     <form method="get" asp-controller="WorkWithQuest" asp-action="UpdateView">
-                        <button name="name" value=@item.Name>Update quest</button>
+                        <button name="name" value=@item.Name>@Localizer["UpdateQuest"]</button>
                     </form>
                 </div>
             }

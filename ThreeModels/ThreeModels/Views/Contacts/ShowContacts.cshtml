@@ -1,6 +1,6 @@
 ﻿@model Contacts
 @{
-    ViewData["Title"] = "Contacts";
+    ViewData["Title"] = Localizer["Header"];
 }
 
 @section Navigation {
@@ -9,7 +9,7 @@
     }
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>@Localizer["Header"]</h1>
 
 @await Html.PartialAsync("Contacts", Model)
 

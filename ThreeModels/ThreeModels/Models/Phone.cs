@@ -11,7 +11,9 @@ namespace ThreeModels.Models
         }
 
         public int Id { get; set; }
-        [Required, MaxLength(20)]
+        [Required(ErrorMessage = "NumberRequired"),
+            MaxLength(20, ErrorMessage = "MaxLengthNumber"),
+            Display(Name = "Number")]
         public string Number { get; set; }
     }
 }

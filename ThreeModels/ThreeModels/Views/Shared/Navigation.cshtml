@@ -7,27 +7,28 @@
         </button>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">@Localizer["Privacy"]</a>
             </li>
             @if(ViewBag.Session == null)
             {
-                <a class="nav-link" asp-area="" asp-controller="AutoReg" asp-action="AutorisationView">Autorisation</a>
-                <a class="nav-link" asp-area="" asp-controller="AutoReg" asp-action="RegistrationView">Registration</a>
+                <a class="nav-link" asp-area="" asp-controller="AutoReg" asp-action="AutorisationView">@Localizer["Autorisation"]</a>
+                <a class="nav-link" asp-area="" asp-controller="AutoReg" asp-action="RegistrationView">@Localizer["Registration"]</a>
             }
             @if(ViewBag.Session == "admin")
             {
-                <a class="nav-link" asp-area="" asp-controller="WorkWithQuest" asp-action="CreateView">Create quest</a>
+                <a class="nav-link" asp-area="" asp-controller="WorkWithQuest" asp-action="CreateView">@Localizer["CreateQuest"]</a>
             }
-            <a class="nav-link" asp-area="" asp-controller="Contacts" asp-action="ShowContacts">Contacts</a>
+            <a class="nav-link" asp-area="" asp-controller="Contacts" asp-action="ShowContacts">@Localizer["Contacts"]</a>
             @if(ViewBag.Session != null)
             {
-                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="ShowAccount">Account</a>
-                <a class="nav-link" asp-area="" asp-controller="AutoReg" asp-action="LogOut">Log out</a>
+                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="ShowAccount">@Localizer["Account"]</a>
+                <a class="nav-link" asp-area="" asp-controller="AutoReg" asp-action="LogOut">@Localizer["LogOut"]</a>
             }
         </ul>
+        @await Html.PartialAsync("SelectLanguage")
     </div>
 </nav>
 

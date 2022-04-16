@@ -1,6 +1,6 @@
 ﻿@model Client
 @{
-    ViewData["Title"] = "Change info";
+    ViewData["Title"] = Localizer["Header"];
 }
 
 @section Navigation {
@@ -9,23 +9,20 @@
     }
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>@Localizer["Header"]</h1>
 
 <div>
     <form method="post" asp-action="Update" >
-        <label>Name</label><br />
-        <input type="text" asp-for="Name" value="@Model.Name"/><br />
+        <input type="text" asp-for="Name" value="@Model.Name" placeholder="@Localizer["Name"]"/><br />
         <span asp-validation-for="Name"></span><br />
     
-        <label>Surename</label><br />
-        <input type="text" asp-for="Surename" value="@Model.Surename"/><br />
+        <input type="text" asp-for="Surename" value="@Model.Surename" placeholder="@Localizer["Surename"]"/><br />
         <span asp-validation-for="Surename"></span><br />
     
-        <label>Password</label><br />
-        <input type="password" asp-for="Password" value="@Model.Password"/><br />
+        <input type="password" asp-for="Password" value="@Model.Password" placeholder="@Localizer["Password"]"/><br />
         <span asp-validation-for="Password"></span><br />
 
-        <input type="submit" value="Save"/><br /><br />
+        <input type="submit" value="@Localizer["Button"]"/><br /><br />
 
         <input type="hidden" asp-for="Id" value="@Model.Id"/><br />
     </form>

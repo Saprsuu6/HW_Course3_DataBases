@@ -3,6 +3,7 @@ using BusinesLogic.Logic;
 using BusinesLogic.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Globalization;
 using System.Text;
 using ThreeModels.Models;
 
@@ -94,7 +95,11 @@ namespace ThreeModels.Controllers
 
                 GetSession();
 
-                ViewBag.Message = "Your account was duccesfully apdated.";
+                if (CultureInfo.CurrentCulture.Name=="en")  
+                    ViewBag.Message = "Your account was succesfully apdated.";
+                else if (CultureInfo.CurrentCulture.Name == "ru")
+                    ViewBag.Message = "Ваш аккаунт небыл обновлён.";
+
                 return View("ShowAccountUpdate", client);
             }
         }

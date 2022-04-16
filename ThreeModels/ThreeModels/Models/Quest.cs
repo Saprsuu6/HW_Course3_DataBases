@@ -18,19 +18,29 @@ namespace ThreeModels.Models
         }
 
         public int Id { get; set; }
-        [Required, RegularExpression(@"^[^\/:*?<>|+ ]+$",
-            ErrorMessage = @"Forbidden symbols"), MaxLength(50)]
+        [Required(ErrorMessage = "NameRequired"),
+            RegularExpression(@"^[^\/:*?<>|+ ]+$", ErrorMessage = "RegexName"),
+            MaxLength(50, ErrorMessage = "MaxLengthName"),
+            Display(Name = "Name")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "PhotoRequired")]
         public string Photo { get; set; }
-        [Range(1, 2, ErrorMessage = "Minimum players")]
+        [Required(ErrorMessage = "RangeMinRequired"), 
+            Range(1, 2, ErrorMessage = "RangeMin"),
+            Display(Name = "MinPalyers")]
         public uint MinPalyers { get; set; }
-        [Range(50, 100, ErrorMessage = "Maximum players")]
+        [Required(ErrorMessage = "RangeMaxRequired"), 
+            Range(50, 100, ErrorMessage = "RangeMax"),
+            Display(Name = "MaxPalyers")]
         public uint MaxPalyers { get; set; }
-        [Required, RegularExpression(@"^(?:0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$",
-            ErrorMessage = @"Time format"), MaxLength(5)]
+        [Required(ErrorMessage = "TimeRequited"),
+            RegularExpression(@"^(?:0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "RegexTime"),
+            MaxLength(4, ErrorMessage = "MaxLengthTime"),
+            Display(Name = "Time")]
         public string Time { get; set; }
-        [Range(1, 5, ErrorMessage = "Rating")]
+        [Required(ErrorMessage = "RatingRequired"), 
+            Range(1, 5, ErrorMessage = "RangeRating"),
+            Display(Name = "Rating")]
         public uint Rating { get; set; }
     }
 }

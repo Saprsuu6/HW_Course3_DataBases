@@ -1,6 +1,6 @@
 ﻿@model Quest
 @{
-    ViewData["Title"] = "Update quest";
+    ViewData["Title"] = @Localizer["Header"];
 }
 
 @section Navigation {
@@ -12,31 +12,25 @@
 <h1>@ViewData["Title"]</h1>
 
 <form method="post" asp-action="Update">
-    <label>Name</label><br />
-    <input type="text" asp-for="Name" value="@Model.Name"/><br />
+    <input type="text" asp-for="Name" value="@Model.Name" placeholder="@Localizer["Name"]"/><br />
     <span asp-validation-for="Name"></span><br />
 
-    <label>Photo (url)</label><br />
-    <input type="text" asp-for="Photo" value="@Model.Photo"/><br />
+    <input type="text" asp-for="Photo" value="@Model.Photo" placeholder="@Localizer["Photo"]"/><br />
     <span asp-validation-for="Photo"></span><br />
 
-    <label>Minimum palyers</label><br />
-    <input type="number" asp-for="MinPalyers" value="@Model.MinPalyers"/><br />
+    <input type="number" asp-for="MinPalyers" value="@Model.MinPalyers" placeholder="@Localizer["MinPlayers"]"/><br />
     <span asp-validation-for="MinPalyers"></span><br />
 
-    <label>Maximum players</label><br />
-    <input type="number" asp-for="MaxPalyers" value="@Model.MaxPalyers"/><br />
+    <input type="number" asp-for="MaxPalyers" value="@Model.MaxPalyers" placeholder="@Localizer["MaxPlayers"]"/><br />
     <span asp-validation-for="MaxPalyers"></span><br />
 
-    <label>Time</label><br />
-    <input type="text" asp-for="Time" value="@Model.Time"/><br />
+    <input type="text" asp-for="Time" value="@Model.Time" placeholder="@Localizer["Time"]"/><br />
     <span asp-validation-for="Time"></span><br />
 
-    <label>Rating</label><br />
-    <input type="number" asp-for="Rating" value="@Model.Rating"/><br />
+    <input type="number" asp-for="Rating" value="@Model.Rating" placeholder="@Localizer["Rating"]"/><br />
     <span asp-validation-for="Rating"></span><br />
 
-    <input type="submit" value="Update" /><br /><br />
+    <input type="submit" value="@Localizer["Button"]" /><br /><br />
 
     <input type="hidden" asp-for="Id" value="@Model.Id"/>
 </form>
