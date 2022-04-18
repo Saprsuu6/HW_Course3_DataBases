@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using ThreeModels.Infrastructure;
 using ThreeModels.Models;
 
 namespace ThreeModels
@@ -52,6 +53,11 @@ namespace ThreeModels
             {
                 options.IdleTimeout = TimeSpan.FromHours(1);
             });
+
+            services.AddSingleton<Logger>();
+
+            services.AddMvc().AddMvcOptions(
+                options => options.Filters.Add<TimeAttribute>());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

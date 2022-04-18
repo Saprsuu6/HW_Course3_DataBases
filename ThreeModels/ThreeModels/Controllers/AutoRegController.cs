@@ -6,6 +6,7 @@ using AutoMapper;
 using System;
 using System.Text;
 using Microsoft.Extensions.Logging;
+using ThreeModels.Infrastructure;
 
 namespace ThreeModels.Controllers
 {

@@ -1,0 +1,8 @@
+18.04.2022 14:43:01: Employer 0.0.0.1 visited site for 00:00:01.7799954 miliseconds
+18.04.2022 14:43:01: On executing ThreeModels.Controllers.HomeController.Index (ThreeModels) method left 1788 miliseconds
+18.04.2022 14:43:04: On executing ThreeModels.Controllers.HomeController.SetLanguage (ThreeModels) method left 0 miliseconds
+4/18/2022 2:43:04 PM: Employer 0.0.0.1 visited site for 00:00:00.0131014 miliseconds
+4/18/2022 2:43:04 PM: On executing ThreeModels.Controllers.HomeController.Index (ThreeModels) method left 15 miliseconds
+4/18/2022 2:43:06 PM: On executing ThreeModels.Controllers.ContactsController.ShowContacts (ThreeModels) method left 104 miliseconds
+4/18/2022 2:44:42 PM: Employer 0.0.0.1 (0) visited site for 1622 miliseconds
+4/18/2022 2:44:42 PM: On executing ThreeModels.Controllers.HomeController.Index (ThreeModels) method left 1628 miliseconds

@@ -13,6 +13,7 @@ using System.Globalization;
 using Microsoft.Extensions.Localization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Http;
+using ThreeModels.Infrastructure;
 
 namespace ThreeModels.Controllers
 {
@@ -40,6 +41,7 @@ namespace ThreeModels.Controllers
             }
         }
 
+        [TypeFilter(typeof(ClientsAttribute))]
         public IActionResult Index()
         {
             GetSession();
