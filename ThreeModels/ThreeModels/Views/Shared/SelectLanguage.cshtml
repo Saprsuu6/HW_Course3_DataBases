@@ -1,4 +1,9 @@
-﻿@{
+﻿@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Builder
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
     // получаем сервис IRequestCultureFeature
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
     // получаем список поддерживаемых культур
@@ -7,8 +12,9 @@
         .ToList();
 }
  
-<form asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path" method="get">
-      <select name="culture" onchange="this.form.submit();"
-                                    asp-for="@requestCulture.RequestCulture.UICulture.Name"
-                                    asp-items="cultureItems"></select>
+<form asp-controller="Home" asp-action="SetLanguage" 
+        asp-route-returnUrl="@Context.Request.Path" method="post">
+      
+        <select name="culture" asp-for="@requestCulture.RequestCulture.UICulture.Name"
+                onchange="this.form.submit();" asp-items="cultureItems"></select>
 </form>

@@ -67,7 +67,7 @@ namespace ThreeModels.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
             Response.Cookies.Append(

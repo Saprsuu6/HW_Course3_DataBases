@@ -1,0 +1,138 @@
+2022-04-17 10:56:25.573 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 10:56:25.596 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 10:56:25.598 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-17 10:57:32.333 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 10:57:32.342 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 10:57:32.344 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-17 10:57:48.911 +03:00 [Error] Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: The view 'Index' was not found. Searched locations: /Views/Home/Index.ru-RU.cshtml, /Views/Home/Index.ru.cshtml, /Views/Home/Index.cshtml, /Views/Shared/Index.ru-RU.cshtml, /Views/Shared/Index.ru.cshtml, /Views/Shared/Index.cshtml
+2022-04-17 10:57:49.060 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/Home/Index.ru-RU.cshtml
+/Views/Home/Index.ru.cshtml
+/Views/Home/Index.cshtml
+/Views/Shared/Index.ru-RU.cshtml
+/Views/Shared/Index.ru.cshtml
+/Views/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-17 10:58:10.964 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 10:58:10.974 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 10:58:10.976 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-17 10:58:33.534 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 10:58:33.544 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 10:58:33.546 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-17 10:58:56.821 +03:00 [Error] Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: The view 'Index/' was not found. Searched locations: /Views/Home/Index/.ru-RU.cshtml, /Views/Home/Index/.ru.cshtml, /Views/Home/Index/.cshtml, /Views/Shared/Index/.ru-RU.cshtml, /Views/Shared/Index/.ru.cshtml, /Views/Shared/Index/.cshtml
+2022-04-17 10:58:56.857 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Index/' was not found. The following locations were searched:
+/Views/Home/Index/.ru-RU.cshtml
+/Views/Home/Index/.ru.cshtml
+/Views/Home/Index/.cshtml
+/Views/Shared/Index/.ru-RU.cshtml
+/Views/Shared/Index/.ru.cshtml
+/Views/Shared/Index/.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-17 10:59:50.813 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 10:59:50.823 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 10:59:50.824 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-17 11:00:40.709 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 11:00:40.718 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 11:00:40.720 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-17 11:00:55.902 +03:00 [Error] Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: The view 'Index.en' was not found. Searched locations: /Views/Home/Index.en.ru-RU.cshtml, /Views/Home/Index.en.ru.cshtml, /Views/Home/Index.en.cshtml, /Views/Shared/Index.en.ru-RU.cshtml, /Views/Shared/Index.en.ru.cshtml, /Views/Shared/Index.en.cshtml
+2022-04-17 11:00:55.939 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Index.en' was not found. The following locations were searched:
+/Views/Home/Index.en.ru-RU.cshtml
+/Views/Home/Index.en.ru.cshtml
+/Views/Home/Index.en.cshtml
+/Views/Shared/Index.en.ru-RU.cshtml
+/Views/Shared/Index.en.ru.cshtml
+/Views/Shared/Index.en.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-17 11:01:31.876 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 11:01:31.889 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 11:01:31.891 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-17 11:01:40.058 +03:00 [Error] Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor: The view 'Index.en.cshtml' was not found. Searched locations: /Index.en.cshtml
+2022-04-17 11:01:40.094 +03:00 [Error] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Index.en.cshtml' was not found. The following locations were searched:
+/Index.en.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-04-17 11:02:05.644 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 11:02:05.659 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 11:02:05.661 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-17 11:02:26.703 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-17 11:02:26.713 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-17 11:02:26.714 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels

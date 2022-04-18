@@ -1,0 +1,54 @@
+2022-04-18 11:30:27.636 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:30:27.659 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:30:27.669 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:31:06.153 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:31:06.163 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:31:06.164 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:32:11.409 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:32:11.419 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:32:11.422 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:33:26.116 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:33:26.127 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:33:26.129 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:33:57.697 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:33:57.708 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:33:57.710 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:34:55.229 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:34:55.239 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:34:55.240 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:35:51.135 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:35:51.145 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:35:51.147 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:36:27.037 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:36:27.048 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:36:27.049 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:36:52.341 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:36:52.351 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:36:52.352 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:37:47.303 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:37:47.315 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:37:47.317 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:39:01.569 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:39:01.578 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:39:01.579 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:39:15.116 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:39:15.126 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:39:15.127 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:41:01.339 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:41:01.351 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:41:01.353 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:42:09.100 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:42:09.110 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:42:09.112 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:43:41.008 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:43:41.017 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:43:41.019 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:44:05.780 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:44:05.790 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:44:05.791 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:47:40.978 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:47:40.988 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:47:40.989 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
+2022-04-18 11:47:52.790 +03:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2022-04-18 11:47:52.800 +03:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2022-04-18 11:47:52.801 +03:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\Users\coffe\Desktop\Git(Projects)\HW_Course3_DataBases\ThreeModels\ThreeModels
